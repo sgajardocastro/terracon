@@ -1,0 +1,204 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "",
+                "nombreCorto": "Indicadores Protocolos Calidad:",
+                "indicadores": [
+                    {
+                        "titulo": "Planificados",
+                        "icono": "mdi-chart-gantt",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosPlanificados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Aprobados",
+                        "icono": "mdi-check-decagram",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosAprobados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                    },
+                    {
+                        "titulo": "Rechazados",
+                        "icono": "mdi-note-remove-outline",
+                        "color":"Red",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosRechazados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "No Terminados",
+                        "icono": "mdi-stop-circle",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosPendientes",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    }
+                ]
+            },
+            {
+              "titulo": "",
+                "nombreCorto": "Apertura Protocolos Calidad - Familias:",
+                "indicadores": [
+                  {
+                        "titulo": "Movimiento de tierras",
+                        "icono": "mdi-excavator",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/familias/movimientoTierras",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Area Mecánica",
+                        "icono": "mdi-wrench",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/familias/areaMecanica",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Cierre y Restitución",
+                        "icono": "mdi-sign-caution",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/familias/cierreReconstruccion",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Ensayos y Pruebas",
+                        "icono": "mdi-ruler-square-compass",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/familias/ensayosPruebas",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                  }
+                  ,
+                  {
+                    "titulo": "Cruces y Túneles",
+                    "icono": "mdi-tunnel-outline",
+                    "color":"Red",
+                    "unidad": "",
+                    "uri":"/calidad/dashboard/familias/crucesTuneles",
+                    "grafico": {"categoria": "serie",
+                        "nombre":"serie",
+                        "series":[
+                        {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                        ]},
+                    "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                },
+                {
+                    "titulo": "Conexiones y Reparaciones",
+                    "icono": "mdi-truck-fast-outline",
+                    "color":"Green",
+                    "unidad": "",
+                    "uri":"/calidad/dashboard/familias/conexiones",
+                    "grafico": {"categoria": "serie",
+                        "nombre":"serie",
+                        "series":[
+                        {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                        ]},
+                    "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                },
+                {
+                    "titulo": "Obras Previas",
+                    "icono": "mdi-traffic-cone",
+                    "color":"Orange",
+                    "unidad": "",
+                    "uri":"/calidad/dashboard/familias/previas",
+                    "grafico": {"categoria": "serie",
+                        "nombre":"serie",
+                        "series":[
+                        {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                        ]},
+                    "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                },
+                {
+                    "titulo": "Obras Civiles",
+                    "icono": "mdi-bridge",
+                    "color":"Red",
+                    "unidad": "",
+                    "uri":"/calidad/dashboard/familias/obras",
+                    "grafico": {"categoria": "serie",
+                        "nombre":"serie",
+                        "series":[
+                        {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                        ]},
+                    "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                }
+                ]
+            }
+        ]
+    },
+    {
+        "export": {
+            "filename": "calidad.xlsx",
+            "hojas": [
+              {
+                "nombre": "Lotes Recepción",
+                "url": "servicio/leanglobal/procesosSurveyV3?fecha_desde=2025-08-26&fecha_hasta=2025-09-25&ts.id_empresa_cliente=&ts.id_proyecto=",
+                "campos": [
+                  { "nombre": "id_survey", "header": "survey" }
+                ]
+              }
+
+            ]
+        }
+    }
+
+]

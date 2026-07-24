@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "extracted_from": "postgres_QA.sql",
+    "table": "sch_leansurvey_qa.tsrv_templates",
+    "extracted_at": "2026-04-15 22:43:46",
+    "template_id": 145,
+    "name": "Registro Técnico Conexión MG",
+    "codi": "YYY",
+    "desc": "Registro Técnico Conexión MG",
+    "id_tipo_srv": "36",
+    "id_flow_tmpl": "7"
+  },
+  "header_seed": null,
+  "body_seed": {
+    "segmentos": [
+      {
+        "label": "Registro Obligatorio Técnico (Evidencia Fotográfica)",
+        "touch": false,
+        "posicion": 1,
+        "attributes": [
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro Fotográfico ATS",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 1,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro Fotográfico Charla",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 2,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro Fotográfico Libro de asistencia",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 3,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro Fotográfico Llegada al domicilio",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 4,
+            "compression": 50
+          },
+          {
+            "type": "dateHourPicker",
+            "label": "Informar Horario de Inicio de trabajos",
+            "default": "sysdatehhmm",
+            "nullable": false,
+            "posicion": 5
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico fotos de gasificaciones",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 6,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Video Preliminar trazado de cañería",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 7,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico del despiece de conexión",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 8,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico check list trabajos en altura",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 9,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico del montaje de piezas en artefacto(s)",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 10,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico al término de la conexión",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 11,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico verticalidad sin conexión de Artefacto",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 12,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico del uso del detector de gas",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 13,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico Check List de Uniones Visibles",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 14,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico Recepción final de trabajos",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 15,
+            "compression": 50
+          },
+          {
+            "type": "dateHourPicker",
+            "label": "Registro Horario de llegada Certificador",
+            "default": "sysdatehhmm",
+            "nullable": false,
+            "posicion": 16
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro fotográfico de las fichas de conexión",
+            "galeria": [],
+            "maxFotos": 20,
+            "nullable": false,
+            "posicion": 17,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Registro entrega de Artefactos en comodato",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 18,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Fotografico Medidor Instalado",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 18,
+            "compression": 50
+          },
+          {
+            "obs": "",
+            "type": "photoCapture",
+            "label": "Fotografico Medidor Retirado",
+            "galeria": [],
+            "maxFotos": 5,
+            "nullable": false,
+            "posicion": 18,
+            "compression": 50
+          }
+        ],
+        "collapsible": false
+      },
+      {
+        "label": "Antecedentes Complementarios",
+        "touch": true,
+        "posicion": 2,
+        "attributes": [
+          {
+            "geo": true,
+            "body": [],
+            "type": "registroEventos",
+            "label": "Eventos",
+            "maxDocs": 5,
+            "maxFotos": 3,
+            "nullable": true,
+            "compression": 0.25
+          }
+        ],
+        "collapsible": false
+      }
+    ]
+  },
+  "approval_seed": null
+}

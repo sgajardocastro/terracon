@@ -1,0 +1,148 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "",
+                "nombreCorto": "Protocolos por Dimensión ",
+                "indicadores": [
+                    {
+                        "titulo": "Calidad",
+                        "icono": "mdi-medal",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/calidad",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Avance",
+                        "icono": "mdi-chart-timeline",
+                        "color":"Indigo",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/avance",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                    },
+                    {
+                        "titulo": "Seguridad",
+                        "icono": "mdi-security",
+                        "color":"Teal",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/seguridad",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Medio Ambiente",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    }
+                ]
+            },
+            {
+              "titulo": "",
+                "nombreCorto": "Protocolos por Estado",
+                "indicadores": [
+                    {
+                        "titulo": "Aprobados",
+                        "icono": "mdi-check-decagram",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/general/dashboard/gestion/aprobados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Rechazados",
+                        "icono": "mdi-check-decagram",
+                        "color":"Red",
+                        "unidad": "",
+                        "uri":"/general/dashboard/gestion/rechazados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                    },
+                    {
+                        "titulo": "Pendientes de Ejecución",
+                        "icono": "mdi-note-alert-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/gestion/pendientesEjecucion",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "En Aprobación",
+                        "icono": "mdi-note-alert-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/gestion/pendientesAprobacion",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "export": {
+            "filename": "calidad.xlsx",
+            "hojas": [
+              {
+                "nombre": "Lotes Recepción",
+                "url": "servicio/leanglobal/procesosSurveyV3?fecha_desde=2025-08-26&fecha_hasta=2025-09-25&ts.id_empresa_cliente=&ts.id_proyecto=",
+                "campos": [
+                  { "nombre": "id_survey", "header": "survey" }
+                ]
+              }
+
+            ]
+        }
+    }
+
+]

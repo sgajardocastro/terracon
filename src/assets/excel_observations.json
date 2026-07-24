@@ -1,0 +1,563 @@
+[
+  {
+    "num": "1",
+    "tipo": "Documento  / AST",
+    "comentarios": "1.Ajustar flujo de aprobación a 3 firmas y roles que concuerden con documento (Supervisor: confecciona, APR: Revisa, ITO: Aprueba)\r\n 2.No existe campo para identificar la tarea a desarrollar (Por ejemplo: cierre perimetral calzada)\r\n3.Ajustar riesgos a listado de ISL por familia de riesgos\r\n4.En punto 4 \"medidas de control\" consucción defensiva solo refiere a línea del tren (de manera exclusiva) esto no aplica a todos los contratos\r\n5.Se repite conexión a tierra en medidas de control: \"Efectuar conexión a tierra en equipos\", \"Mantener equipos energizados conectados a tierra\"\r\n6.En controles de área: Se sugiere indicar código de colores de los meses estandarizados a modo de poder verificar (por cualquier persona) si se cumple este ítem\r\n7.Para cliente Sonacol: Agregar ítem PT asociado y lugar donde se realizará actividad\r\n8.Habilitar firmas del personal involucrado con cargo asociado.",
+    "isGreen": false
+  },
+  {
+    "num": "2",
+    "tipo": "Documento auxiliar / CHARLA OPERACIONAL DIARIA",
+    "comentarios": "1.Listado de aprobaciones predeterminado (No manual)\r\n2.Habilitar firmas personal asistente con cargo asociado\r\n3.Para contratos Sonacol agregar ítem para PT asociado y firma autorización ITO",
+    "isGreen": false
+  },
+  {
+    "num": "3",
+    "tipo": "Documento auxiliar / CHECK LIST BETONERA",
+    "comentarios": "1.Agregar identificación del equipo (N°interno, marca u otro)\r\n2.Agregar identificación de persona que utilizará el equipo\r\n3.Incluir verificación de mantención con código de color del mes",
+    "isGreen": false
+  },
+  {
+    "num": "4",
+    "tipo": "Documento auxiliar / CHECK LIST DISPENSADOR DE AGUA",
+    "comentarios": "1.En apartado 1.6 indica \"ubicación adecuada\" se requiere especificar que es adecuada: bajo sombra, aislada de condiciones climáticas con aislapol, interior caseta u otro. (Listado)\r\n2.Identificar dispensador, Es probable que se cuantifiquen los dispensadores del proyecto, se debe tener referencia del dispensador revisado (Numero Identificador)\r\n3.Sólo refiere identificación del dispensador de agua, no especifica documento para caseta de hidratación cuando cliente exige agua embotellada para el consumo en terreno. Así mismo no se evidenciainspección para agua potable utilizada para lavado de manos\r\n4.No se evidencia observaciones en formulario terminado, aparece responsable pero no detalle de anomalías",
+    "isGreen": false
+  },
+  {
+    "num": "5",
+    "tipo": "Documento auxiliar / CHECK LIST EQUIPOS DE ILUMINACION",
+    "comentarios": "1.No se evidencia observaciones registradas en aplización al realizar lista de chequeo. Formulario deja observaciones en blanco\r\n2.Incluir código de colores por área de mantenimiento",
+    "isGreen": false
+  },
+  {
+    "num": "6",
+    "tipo": "Documento auxiliar / CHECK LIST HERRAMIENTAS MANUALES",
+    "comentarios": "1.No permite registrar estado óptimo de cada herramienta, solo deja marcar las herramientas a usar pero no verificar el estado de las mismas. Tendría que quedar cualquier anomalía en ítem observaciones, pero queda a criterio del usuario al no existir un estandar definido\r\n*Al rechazar el registtro, no permite cerrar el proceso, inclusive al hacer levantamiento. Continúa apareciendo pendiente en el sistema de firmas.",
+    "isGreen": false
+  },
+  {
+    "num": "7",
+    "tipo": "Documento auxiliar / CHECK LIST MARTILLO DEMOLEDOR",
+    "comentarios": "1.No permite identificar N° de equipo inspeccionado\r\n*Oportunidad de mejora: Poder cargar fotografía de equipo y/o anomalía",
+    "isGreen": true
+  },
+  {
+    "num": "8",
+    "tipo": "Documento auxiliar / CHECK LIST TECLES",
+    "comentarios": "1.En aplicacación título mal escrito \"chack list tecles…\"\r\n2.Lista de chequeo solicita 2 veces la misma inspección: Al inicio es por día, en el resumen semanal permite indicar SI-NO-NA, que es mas detallado que el chequeo inicial por día.\r\n3.El resumen semanal no distingue si la información de la inspección fue subsanada día a día. Es decir, el resumen debiese ser diario al menos dar la opción de SI-NO-NA",
+    "isGreen": true
+  },
+  {
+    "num": "9",
+    "tipo": "Documento auxiliar / CHECK LIST VIBROPISON",
+    "comentarios": "1.Check list no permite identificar si está bueno-malo-NA. Ni siquiera en  resumen semanal",
+    "isGreen": true
+  },
+  {
+    "num": "10",
+    "tipo": "Documento auxiliar / MONOFASICO-TRIFASICO",
+    "comentarios": "1.Se sugiere escribir los colores del mes según código de colores corporativo\r\n2.Descripción de conexiones positiva y negativa sin forma de identificar si cumple o no en chequeo. El resultado es un chequeo que considera todos los ítem como negativos e indica fehca de reparación el día del chequeo por sistema (no el día en que efectivamente se realiza check list desde aplicación\r\n3.No permite identificar el N° interno del elemento inspeccionado",
+    "isGreen": false
+  },
+  {
+    "num": "11",
+    "tipo": "Documento auxiliar / CHEQUEO EXTENSIÓN ELÉCTRICA",
+    "comentarios": "1.En lista desplegable refiere \"estado de...\" pero en chequeo no permite discernir\r\n2.Posee observaciones generales, no por ítem. Por lo que el chequeo no permite identificar anomalías",
+    "isGreen": true
+  },
+  {
+    "num": "12",
+    "tipo": "Documento auxiliar / INGREOS A ZANJA",
+    "comentarios": "1.No permite identificar referencias de ubicación de la zanja",
+    "isGreen": true
+  },
+  {
+    "num": "13",
+    "tipo": "Documento auxiliar / MATRIZ DE OBSERVACIONES - RECOMENDACIONES",
+    "comentarios": "1.Se sugiere campo para identificar responsable de solución",
+    "isGreen": true
+  },
+  {
+    "num": "14",
+    "tipo": "Documento auxiliar / OBSERVACIÓN  CONDUCTA/LINEA DE CONTROL - SUPERVISIÓN",
+    "comentarios": "SIN OBSERVACIONES",
+    "isGreen": true
+  },
+  {
+    "num": "15",
+    "tipo": "Documento auxiliar / OBSERVACIÓN  CONDUCTA MAESTROS",
+    "comentarios": "1.Errores de redacción en el formato. Ejemplo: refiere en plural y se está evaluando a 1 trabajador o dice \"el trabajadores\"",
+    "isGreen": true
+  },
+  {
+    "num": "16",
+    "tipo": "SST / Registro de Accidente e Incidentes",
+    "comentarios": "Registro de accidente\n1.- zona corporal afectada falta incluir la lista desplegable de las zonas\n2.- Sexo: incluir la alternativa de otro\n3.- Ingreso a mutualidad dice Mutual, debe indicar ACHS\n\nRegistro incidente y sucesos peligrosos\n1.- El botón para generar aparece en blanco\n2.- Sexo: incluir otro\n3.- No permite asignar al grupo de procesos",
+    "isGreen": false
+  },
+  {
+    "num": "17",
+    "tipo": "SST / Informe Detallado",
+    "comentarios": "Informe detallado\n1.- En antecedentes generales no permite ingresar nombre de administrador y prevención (quedan en blanco)\n2.- En antecedentes generales no suman los días perdidos\n3.- En antecedentes generales no esta automatizado los datos de la tasa\n4.- En métrica de accidente no suma los días perdidos, el % de ev. de cumplimiento no arroja datos\n5.- En el punto de capacitaciones, columna de relatoría indica mutual, se abrir la selección a: Prevención, CPHS, Organismo Administrador, Proveedor, Otec, Otro), en el caso de seleccionar otro ingresar cuál.\n6.- En el punto campaña SST, evaluar si se puede cargar alguna evidencia al reporte (imagen, pdf, excel)\n7.- Punto Protocolos, no arroja dato de avance total, para lo cual, previo al programa se debe incluir el total de actividades.\n8.- En el punto medición de índice, no arroja el índice de gravedad\n9.- Finalmente, al generar el informe NO está alimentando el dashboard",
+    "isGreen": false
+  },
+  {
+    "num": "18",
+    "tipo": "Documento auxiliar / REGISTRO OBSERVACION DE CONDUCTA / se repite formulario",
+    "comentarios": "1.Orientada exclusivamente a servidumbre\r\n2.Consiste en protocolo constructivo y no a observación de conducta",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se aclaró que la orientación a servidumbre responde a las directrices contractuales."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se reclasificó el formulario separándolo de la categoría de conducta pura a protocolo constructivo."
+      }
+    }
+  },
+  {
+    "num": "19",
+    "tipo": "b",
+    "comentarios": "1.Se sugiere incluir campo para registrar fecha y hora del evanto",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se incorporaron los campos de fecha y hora del evento dentro del encabezado."
+      }
+    }
+  },
+  {
+    "num": "20",
+    "tipo": "Documento auxiliar / VEHICULOS Y EQUIPOS MOVILES",
+    "comentarios": "1.Se sugiere considerar antivuelco en chesk list dado que algunos clientes lo exigen",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se agregó la verificación de la barra antivuelco dentro de los ítems de seguridad vehicular."
+      }
+    }
+  },
+  {
+    "num": "21",
+    "tipo": "Capacitaciones / CHARLA OPERACIONAL DIARIA",
+    "comentarios": "1.En ítem duración no se sabe su son freccion de horas o minutos\r\n2.Formulario no permite firma de creador\r\n3Permitir firma por ITO (en contratos sonacol)",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se especificó en la etiqueta que la duración se registra en minutos."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se habilitó el campo de firma del creador de la charla."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se integró el flujo de firma del representante ITO según contrato."
+      }
+    }
+  },
+  {
+    "num": "22",
+    "tipo": "Capacitaciones / REGISTRO DE ASISTENCIA Y COMUNICACIONES",
+    "comentarios": "1.En ítem duración no permite indicar si duración corresponde a minutos u horas\r\n2.No permite firma de ejecutor\r\n3.No permite identificar a participantes ni su firma",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se agregó selector de unidad de tiempo (Minutos/Horas) para duración."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se agregó el bloque de firma digital para el ejecutor."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se habilitó el flujo de firmas colectivas para registrar datos y firmas de todos los participantes."
+      }
+    }
+  },
+  {
+    "num": "23",
+    "tipo": "Charla operacional diria / CHARLA OPERACIONAL DIARIA",
+    "comentarios": "1.Se repite formulario",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se depuró el catálogo de formularios eliminando el registro duplicado."
+      }
+    }
+  },
+  {
+    "num": "24",
+    "tipo": "Inspecciones / AST / Documento repetido",
+    "comentarios": "1.No permite describir pasos de la tarea\r\n2.No permite identificar peligros asociados a la tarea\r\n3.No permite indicar N° permiso de trabajo asociado",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se expandió el cuerpo para permitir la descripción paso a paso de la tarea."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se agregaron filas para identificar los peligros y medidas de control asociadas."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se incorporó campo numérico para relacionar el Permiso de Trabajo."
+      }
+    }
+  },
+  {
+    "num": "25",
+    "tipo": "Inspecciones / INSPECCION ACCESORIOS DE IZAJE",
+    "comentarios": "1.No permite firma de persona que genera documento\r\n2.No permite identificar datos de Rigger\r\n3.Falta plan de izaje",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se habilitó la firma digital de creación en el paso de flujo correspondiente."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se agregó el bloque para ingresar nombre y acreditación del Rigger."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se integró la carga adjunta del plan de izaje como requisito."
+      }
+    }
+  },
+  {
+    "num": "26",
+    "tipo": "Inspecciones / INSPECCION BAÑOS Y DUCHAS",
+    "comentarios": "1.Se sugiere agregar campo que permita especificar sector de baños inspeccionado. En faena se habilita mas de un punto de trabajo eso sumado a la instalación de faena hace necesario poder identificar el lugar de la inspección.",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se incorporó campo abierto de texto para especificar la ubicación o sector del baño inspeccionado."
+      }
+    }
+  },
+  {
+    "num": "27",
+    "tipo": "Inspecciones / INSPECCION CAMION",
+    "comentarios": "1.Se sugiere que el check de licencia y documentos del camión sea como el de \"inspección vehículos y equipos móviles\", es decir, con la opción de agregar la fecha de vigencia y no solo indicar B-M-NA\r\n2.Al indicar en check list \"presiòn de aire\"de los neumàticos, obliga a contar con instrumento de mediciòn en terreno para poder controlar este ítem, a menos que sea moderno y se pueda verificar esto en el tablero",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se estandarizó la sección de documentos agregando campos de fecha de vigencia."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se modificó el criterio a evaluación visual e indicativa, no obligando a instrumento físico de precisión."
+      }
+    }
+  },
+  {
+    "num": "28",
+    "tipo": "Inspecciones / INSPECCION ELEMENTOS DE PROTECCIÒN PERSONAL",
+    "comentarios": "SIN OBSERVACIONES",
+    "isGreen": true
+  },
+  {
+    "num": "29",
+    "tipo": "Inspecciones / INSPECCION EXTINTORES",
+    "comentarios": "1.Se sugiere habilitar campo para identificar con el Nº de extintor inspeccionado",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se incorporó columna numérica para registrar el identificador único o número del extintor."
+      }
+    }
+  },
+  {
+    "num": "30",
+    "tipo": "Inspecciones / INSPECCION HERRAMIENTAS MANUALES / Documento duplicado",
+    "comentarios": "1.Formato no indica ìtems a revisar. Solo permite indicar si està bueno - malo - NA, de forma general",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se desglosó el checklist general en componentes individuales a revisar y se eliminó el formato duplicado."
+      }
+    }
+  },
+  {
+    "num": "31",
+    "tipo": "Inspecciones / INSPECCION DE MAQUINARIAS",
+    "comentarios": "1.En sección documentos es mejor que posea fecha de vigencia en check list, no solo indicar SI-NO para documentos como licencia operador, permiso circulación, seguro obligatorio y otros\r\n2.En sección \"asignar equipo\" no permite asignar\r\n3.No permite firma de quien ejecuta documento\r\n4.No existe campo para identificar equipo inspeccionado ya sea placa patente o número interno",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se añadieron campos de vigencia para licencias y seguros."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se habilitó la asignación de equipos de trabajo vinculados al contrato."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se agregó flujo de firma digital del ejecutor."
+      },
+      "3": {
+        "resolved": true,
+        "note": "Se incorporaron campos para patente y número interno de identificación."
+      }
+    }
+  },
+  {
+    "num": "32",
+    "tipo": "Inspecciones / INSPECCION ORDEN Y ASEO",
+    "comentarios": "1.Se requiere agregar campo para identificar el lugar inspeccionado a m odo de que formulario también sirva para terreno, o agregar formato exclusivo para terreno, dado que actual documento solo refiere IIFF.\r\n2.No permite firma de quien genera inspección",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se incluyó campo de sector o área para permitir su aplicación tanto en IIFF como en terreno."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se agregó la firma digital de generación."
+      }
+    }
+  },
+  {
+    "num": "33",
+    "tipo": "Inspecciones / INSPECCION DOCUMENTADA DE SEGURIDAD",
+    "comentarios": "1.Al responder un ítem como NA queda con cumplimiento cero, en vez de quedar como NA en informe\r\n2.No permite firma de persona que ejecuta\r\n3.No permite indicar el equipo, móvil o herramienta inspeccionado\r\n4.No permite indicar lugar zanja o excavación inspeccionado\r\n5.En general no permite identificar áreas inspeccionadas lo toma como global de contrato",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se corrigió la lógica del cálculo matemático para excluir los ítems marcados como N/A de la ponderación final."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se habilitó la firma digital de ejecución."
+      },
+      "2": {
+        "resolved": true,
+        "note": "Se agregaron campos identificadores de equipos inspeccionados."
+      },
+      "3": {
+        "resolved": true,
+        "note": "Se incorporó campo específico de zanja o excavación."
+      },
+      "4": {
+        "resolved": true,
+        "note": "Se agregaron campos descriptores del área de trabajo detallada."
+      }
+    }
+  },
+  {
+    "num": "34",
+    "tipo": "Inspecciones / LISTADO DE VERIFICACIÓN DE EQUIPOS",
+    "comentarios": "1.Documento mal cargado solo aparecen códigos, no permite realizar el chequeo",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se corrigió el problema de codificación del template de equipos en la base de datos."
+      }
+    }
+  },
+  {
+    "num": "35",
+    "tipo": "Inspecciones / LISTADO DE VERIFICACION GENERAL",
+    "comentarios": "1.No indica aspectos a inspeccionar, todo es generaly a creiterio de inspector\r\n2.En señalización sigue figurando N° como en los demás ítem. Es un chequeo bastante ambigüo",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se especificaron detalladamente los aspectos a revisar por categoría."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se corrigió el texto del ítem de señalización eliminando la ambigüedad."
+      }
+    }
+  },
+  {
+    "num": "36",
+    "tipo": "Inspecciones / LISTADO DE VERIFICACIÓN HERRAMIENTAS ELÉCTRICAS",
+    "comentarios": "1.Documento mal cargado solo aparecen códigos, no permite realizar el chequeo",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se recargó la estructura JSON correcta de herramientas eléctricas en la base de datos."
+      }
+    }
+  },
+  {
+    "num": "37",
+    "tipo": "Inspecciones / VEHÍCULOS Y EQUIPOS MÓVILES",
+    "comentarios": "1.En horómetros permite escribir no solo usar números\r\n2.Aparece campo extra en reporte sin datos \"Km/Hr prox.mantención\". Este campo fue llenado y aparece arriba en identificación del vehículo",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se restringió el campo de horómetros para aceptar únicamente números."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se eliminó el campo duplicado redundante en la sección inferior del reporte."
+      }
+    }
+  },
+  {
+    "num": "38",
+    "tipo": "IRL / EPP",
+    "comentarios": "1.No permite identificar personal inspeccionado",
+    "isGreen": true
+  },
+  {
+    "num": "39",
+    "tipo": "IRL / ADMINISTRADOR - CONDUCTOR - ENCARGADO DE CONTROL Y GESTION DE PROYECTOS - GERENTE DE PROYECTOS - MAESTRO PRIMERA - MAESTRO SEGUNDA - OPERADOR MAQUINARIA - PREVENCIONISTA - SOLDADOR - SUPERVISOR TERRENO",
+    "comentarios": "1.No permite firma de persona que recibe capacitación \r\n2.En informe aparece información cortada\r\n3.Información de reporte no conversa con información entregada.",
+    "isGreen": false
+  },
+  {
+    "num": "40",
+    "tipo": "Observación de conducta / OBSERVACION CONDUCTA - OPERACIÓN DE MÓVILES",
+    "comentarios": "1.En ítem 3.8 toma respuesta \"No\" como falta, descontando puntaje en resultado. La respuesta \"No\" debe favorecer el resultado\r\n2.ítem 3.11 ocurre igual que en 3.8",
+    "isGreen": true,
+    "evidenceId": "4124",
+    "pdfOk": true,
+    "notes": "ENTONCES LA PREGUNTA ESTA MAL FORMULADA. LA PREGUNTA DEBE SER \"CUMPLE CON NO FUMAR AL INTERIOR DE LA CABINA?\". Un solo criterio de evaluación.",
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "ENTONCES LA PREGUNTA ESTA MAL FORMULADA. LA PREGUNTA DEBE SER \"CUMPLE CON NO FUMAR AL INTERIOR DE LA CABINA?\". Un solo criterio de evaluación."
+      },
+      "1": {
+        "resolved": true,
+        "note": "ENTONCES LA PREGUNTA ESTA MAL FORMULADA. LA PREGUNTA DEBE SER \"CUMPLE CON NO FUMAR AL INTERIOR DE LA CABINA?\". Un solo criterio de evaluación."
+      }
+    }
+  },
+  {
+    "num": "41",
+    "tipo": "Observación de conducta / LÍNEA DE CONTROL - SUPERVISIÓN",
+    "comentarios": "1. Sin observaciones",
+    "isGreen": true
+  },
+  {
+    "num": "42",
+    "tipo": "Observación de conducta / MAESTROS",
+    "comentarios": "1.Punto 2 (2.2) error digitación \"área\" debe decir \"aérea\"\r\n2.En punto 3 (ejecución trabajos) error digitación  \"el trabajadores\"",
+    "isGreen": true,
+    "evidenceId": "4123",
+    "notes": "Evidencia en https://servidor.leanglobal.cl/lean-services-qa/api/archivo/terracon/66eb20d4-15d0-4859-a36a-1fe4c47aab1f.pdf. Se corrigió el ancho de columnas en el PDF y la secuencia de los ítems.",
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Corregido a aérea"
+      },
+      "1": {
+        "resolved": true,
+        "note": "Corregido a el trabajador"
+      }
+    }
+  },
+  {
+    "num": "43",
+    "tipo": "Observación de conducta / TRABAJOS EN CALIENTE",
+    "comentarios": "1.Sin observaciones",
+    "isGreen": true
+  },
+  {
+    "num": "44",
+    "tipo": "Permiso de trabajo / PERMISO DE BLOQUEO",
+    "comentarios": "1.Documento no entrega detalles como: Trabajadores asociados a actividad, firma de involucrados, tramos bloqueados, herramientas de bloqueos.",
+    "isGreen": false,
+    "evidenceId": "4092",
+    "pointsState": {
+      "0": {
+        "note": "El template no indica tramos bloqueados, herramientas de bloqueos. El tratamiento de firmas colectivas tiene el tratamiento que ya fue declarado anteriormente, se debe asignar a un flujo colectivo, permitiendo modificar el equipo."
+      }
+    }
+  },
+  {
+    "num": "45",
+    "tipo": "Permiso de trabajo / PERMISO DE TRABAJO EN ALTURA",
+    "comentarios": "1.No permite firma de personal involucrado",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se habilitó el módulo de firma colectiva de involucrados."
+      }
+    }
+  },
+  {
+    "num": "46",
+    "tipo": "Permiso de trabajo / CIERRA CIRCULAR",
+    "comentarios": "1.Sin observaciones",
+    "isGreen": true
+  },
+  {
+    "num": "47",
+    "tipo": "Permiso de trabajo / ESMERIL ANGULAR",
+    "comentarios": "1.Punto 1 refiere tipo de madera y espesor. Esto no aplica  para esmeril",
+    "isGreen": true,
+    "evidenceId": "4094",
+    "pdfOk": true,
+    "pointsState": {
+      "0": {
+        "note": "Evidencia en https://servidor.leanglobal.cl/lean-services-qa/api/archivo/terracon/5de62cb2-13c9-43c6-9287-80003520b274.pdf"
+      }
+    }
+  },
+  {
+    "num": "48",
+    "tipo": "Permiso de trabajo / EXCAVACIONES Y ZANJA",
+    "comentarios": "1.Sin observaciones",
+    "isGreen": true
+  },
+  {
+    "num": "49",
+    "tipo": "Permiso de trabajo / REPORTE BRECHA DE CONTROL/PARALIZACIÓN DE FAENA",
+    "comentarios": "1.En punto 6 cargo administrador de obra está de más",
+    "isGreen": true,
+    "evidenceId": "4086",
+    "pdfOk": true,
+    "pointsState": {
+      "0": {
+        "note": "Evidencia en https://servidor.leanglobal.cl/lean-services-qa/api/archivo/terracon/db759555-c79e-47f5-ac70-f4aadb7ffa7c.pdf"
+      }
+    }
+  },
+  {
+    "num": "50",
+    "tipo": "SEGURIDAD PERSONALIZADOS",
+    "comentarios": "1.No permite crear personalizados\r\n2.No permite agregar períodos, aparece períodos vencidos: Marzo y Abril.",
+    "isGreen": true,
+    "pointsState": {
+      "0": {
+        "resolved": true,
+        "note": "Se habilitó la funcionalidad de plantillas dinámicas personalizables para el usuario."
+      },
+      "1": {
+        "resolved": true,
+        "note": "Se agregaron los períodos vigentes y se corrigió la validación de fechas."
+      }
+    }
+  },
+  {
+    "num": "51",
+    "tipo": "Auditoría / Informe de Auditoría",
+    "comentarios": "1.- No reconoce la dotación del contrato para definición de la categoría para las multa (Primera hasta 49 trabajadores, segunda de 5 a 199 trabajadores, tercera mas de 200 trabajadores)\n2.- El resultado de la auditoria no alimenta el dashboard\n3.- Se aplica la auditoría revisando puntos normativos y criterios, en el informe PDF adjunto quedaron registrado como NO CUMPLE todos los puntos que requieren cambios, en el plan de resolución se ingresaron los comentarios de los ajustes que se deben realizar.",
+    "isGreen": false
+  }
+]

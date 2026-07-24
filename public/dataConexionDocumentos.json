@@ -1,0 +1,210 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "DocumentacionEquiposConexion",
+                "nombreCorto": "Documentación Equipos Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "Total Equipos",
+                        "icono": "mdi-truck-outline",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/documentos/total"
+                    },
+                    {
+                        "titulo": "Doc. Vigentes",
+                        "icono": "mdi-check-circle-outline",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/documentos/vigentes"
+                    },
+                    {
+                        "titulo": "Por Vencer",
+                        "icono": "mdi-alert-circle-outline",
+                        "color": "Red",
+                        "unidad": "",
+                        "uri": "/conexion/documentos/porvencer"
+                    },
+                    {
+                        "titulo": "Vencidos",
+                        "icono": "mdi-clock-alert-outline",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/documentos/vencidos"
+                    }
+                ]
+            },
+            {
+                "titulo": "DocumentacionPersonalConexion",
+                "nombreCorto": "Documentación Personal Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "Total Personal",
+                        "icono": "mdi-account-hard-hat",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/personal/total"
+                    },
+                    {
+                        "titulo": "Doc. Vigentes",
+                        "icono": "mdi-check-circle-outline",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/personal/vigentes"
+                    },
+                    {
+                        "titulo": "Por Vencer",
+                        "icono": "mdi-alert-circle-outline",
+                        "color": "Red",
+                        "unidad": "",
+                        "uri": "/conexion/personal/porvencer"
+                    },
+                    {
+                        "titulo": "Vencidos",
+                        "icono": "mdi-clock-alert-outline",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/personal/vencidos"
+                    }
+                ]
+            },
+            {
+                "titulo": "DocumentacionAsistenciaConexion",
+                "nombreCorto": "Documentación Asistencia Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "Total Asistencia",
+                        "icono": "mdi-calendar-account",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/asistencia/total"
+                    },
+                    {
+                        "titulo": "Doc. Vigentes",
+                        "icono": "mdi-check-circle-outline",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/asistencia/vigentes"
+                    },
+                    {
+                        "titulo": "Por Vencer",
+                        "icono": "mdi-alert-circle-outline",
+                        "color": "Red",
+                        "unidad": "",
+                        "uri": "/conexion/asistencia/porvencer"
+                    },
+                    {
+                        "titulo": "Vencidos",
+                        "icono": "mdi-clock-alert-outline",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/asistencia/vencidos"
+                    }
+                ]
+            },
+            {
+                "titulo": "DocumentacionEquipamientoConexion",
+                "nombreCorto": "Documentación Equipamiento Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "Total Equipamiento",
+                        "icono": "mdi-tools",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/equipamiento/total"
+                    },
+                    {
+                        "titulo": "Doc. Vigentes",
+                        "icono": "mdi-check-circle-outline",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/equipamiento/vigentes"
+                    },
+                    {
+                        "titulo": "Por Vencer",
+                        "icono": "mdi-alert-circle-outline",
+                        "color": "Red",
+                        "unidad": "",
+                        "uri": "/conexion/equipamiento/porvencer"
+                    },
+                    {
+                        "titulo": "Vencidos",
+                        "icono": "mdi-clock-alert-outline",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/equipamiento/vencidos"
+                    }
+                ]
+            },
+            {
+                "titulo": "PlanificacionConexion",
+                "nombreCorto": "Planificación Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "TOTAL PLAN",
+                        "icono": "mdi-format-list-checks",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/planificacion/total"
+                    },
+                    {
+                        "titulo": "EJECUTADO",
+                        "icono": "mdi-check-all",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/planificacion/ejecutado"
+                    },
+                    {
+                        "titulo": "PENDIENTE",
+                        "icono": "mdi-clock-time-four-outline",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/planificacion/pendiente"
+                    },
+                    {
+                        "titulo": "AVANCE",
+                        "icono": "mdi-chart-line",
+                        "color": "Purple",
+                        "unidad": "%",
+                        "uri": "/conexion/planificacion/avance"
+                    }
+                ]
+            },
+            {
+                "titulo": "DocumentacionReclamosConexion",
+                "nombreCorto": "Documentación Reclamos Conexión:",
+                "indicadores": [
+                    {
+                        "titulo": "Total Reclamos",
+                        "icono": "mdi-alert-octagon-outline",
+                        "color": "Blue",
+                        "unidad": "",
+                        "uri": "/conexion/reclamos/total"
+                    },
+                    {
+                        "titulo": "Cerrados",
+                        "icono": "mdi-check-circle-outline",
+                        "color": "Green",
+                        "unidad": "",
+                        "uri": "/conexion/reclamos/cerrados"
+                    },
+                    {
+                        "titulo": "En Proceso",
+                        "icono": "mdi-progress-clock",
+                        "color": "Orange",
+                        "unidad": "",
+                        "uri": "/conexion/reclamos/proceso"
+                    },
+                    {
+                        "titulo": "Vencidos",
+                        "icono": "mdi-clock-alert-outline",
+                        "color": "Red",
+                        "unidad": "",
+                        "uri": "/conexion/reclamos/vencidos"
+                    }
+                ]
+            }
+        ]
+    }
+]

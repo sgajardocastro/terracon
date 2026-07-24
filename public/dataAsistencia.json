@@ -1,0 +1,69 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "",
+                "nombreCorto": "Indicadores Asistencia:",
+                "indicadores": [
+                    {
+                        "titulo": "Planificados",
+                        "icono": "mdi-chart-gantt",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosPlanificados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Aprobados",
+                        "icono": "mdi-check-decagram",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosAprobados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                    },
+                    {
+                        "titulo": "Rechazados",
+                        "icono": "mdi-note-remove-outline",
+                        "color":"Red",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosRechazados",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "No Terminados",
+                        "icono": "mdi-stop-circle",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/calidad/dashboard/general/protocolosPendientes",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    }
+                ]
+            }
+        ]
+    }
+]

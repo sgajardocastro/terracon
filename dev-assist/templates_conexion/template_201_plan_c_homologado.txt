@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "objective": "Plan C independiente con 1 survey por fila (sin padre/hijo)",
+    "target_template": 201,
+    "source_templates": [110, 145],
+    "strategy": "Si body_seed 201 viene vacio, usar body_seed homologado 110+145"
+  },
+  "rules_plan_c": {
+    "one_row_one_survey": true,
+    "use_template": 201,
+    "mark_plan": "PLAN_C",
+    "assignments_in_body_exec": {
+      "root_object": "body_exec.asignaciones",
+      "fields": [
+        "Contratista",
+        "Supervisor",
+        "Tecnico",
+        "Marca",
+        "empresa_nombre",
+        "supervisor_nombre",
+        "tecnico_nombre"
+      ]
+    }
+  },
+  "body_exec_required_segment": {
+    "label": "ASIGNACION PLAN C",
+    "attributes": [
+      "MARCA PLAN",
+      "EMPRESA PLAN_C",
+      "SUP PLAN_C",
+      "TEC PLAN_C"
+    ]
+  },
+  "excel_headers_for_assignment": {
+    "empresa": ["EMPRESA", "CONTRATISTA", "EMPRESA CONTRATISTA"],
+    "supervisor": ["SUP", "SUPERVISOR", "SUP TERRACON", "SUPERVISOR TERRACON"],
+    "tecnico": ["TEC", "TECNICO", "TÉCNICO", "NOMBRE TECNICO", "NOMBRE TÉCNICO"]
+  }
+}

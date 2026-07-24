@@ -1,0 +1,492 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "",
+                "nombreCorto": "1. KPI Principal",
+                "indicadores": [
+                    {
+                      "titulo": "Medio Ambiente",
+                      "icono": "mdi-chart-gantt",
+                      "color": "Green",
+                      "unidad": "",
+                      "uri": "/ma/kpi/medioAmbiente",
+                      "grafico": {
+                        "categoria": "fecha",
+                        "nombre": "serie",
+                        "series": [
+                          { "campo": "valor", "name": "Medio Ambiente", "type": "line", "visible": true, "showInLegend": false }
+                        ]
+                      },
+                      "uriTabla": "/ma/kpi/medioAmbienteDocumentos",
+                      "columnas": [
+                        {"nombre":"id", "header": "ID", "tipo": "number"},
+                        {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                        {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                        {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                        {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                        {"nombre":"estado", "header": "Estado", "tipo": "string"},
+                        {"nombre":"pct", "header": "Porcentaje", "tipo": "percent"},
+                        {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                        { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                      ]
+                    },
+                    {
+                        "titulo": "Huella de Carbono",
+                        "icono": "mdi-check-decagram",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}],
+                        "indicadores": [
+                          {
+                              "titulo": "Consumo Combustible",
+                              "icono": "mdi-chart-gantt",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          },
+                          {
+                              "titulo": "Consumo Energético",
+                              "icono": "mdi-check-decagram",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                          },
+                          {
+                              "titulo": "Consumo Agua",
+                              "icono": "mdi-note-remove-outline",
+                              "color":"Red",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          }
+                      ]
+                    },
+                    {
+                        "titulo": "Gestión Ambiental",
+                        "icono": "mdi-note-remove-outline",
+                        "color":"Red",
+                        "unidad": "",
+                        "uri":"",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}],
+                        "indicadores": [
+                          {
+                              "titulo": "Gestión Residuos",
+                              "icono": "mdi-chart-gantt",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          },
+                          {
+                              "titulo": "Incidentes Ambientales",
+                              "icono": "mdi-check-decagram",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          },
+                          {
+                              "titulo": "Auditoria Cliente",
+                              "icono": "mdi-note-remove-outline",
+                              "color":"Red",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          },
+                          {
+                              "titulo": "Capacitaciones",
+                              "icono": "mdi-note-remove-outline",
+                              "color":"Red",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          }
+                      ]                                    
+                    },
+                    {
+                        "titulo": "Eval. Desem. Ambiental",
+                        "icono": "mdi-stop-circle",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/ma/kpi/evalDesemAm",
+                        "grafico": {
+                            "categoria": "fecha",
+                            "nombre": "serie",
+                            "series": [
+                            { "campo": "valor", "name": "Medio Ambiente", "type": "line", "visible": true, "showInLegend": false }
+                            ]
+                        },
+                        "indicadores": [
+                            {
+                            "titulo": "Promedio",
+                            "icono": "mdi-chart-gantt",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAm",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                { "campo": "valor", "name": "Promedio", "type": "line", "visible": true, "showInLegend": false },
+                                { "campo": "valor1", "name": "Matriz Impactos MA", "type": "line", "visible": true, "showInLegend": false },
+                                { "campo": "valor2", "name": "Matriz Legal", "type": "line", "visible": true, "showInLegend": false },
+                                { "campo": "valor3", "name": "Política", "type": "line", "visible": true, "showInLegend": false },
+                                { "campo": "valor4", "name": "Plan Gestión Riesgos Desastre", "type": "line", "visible": true, "showInLegend": false },
+                                { "campo": "valor5", "name": "Gestión Ambiental", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor", "header": "Promedio", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                            ]
+                        },
+                        {
+                            "titulo": "Mx Aspectos Impactos MA",
+                            "icono": "mdi-chart-gantt",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAmMxImpMA",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                    { "campo": "valor1", "name": "Matriz Impactos MA", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor1", "header": "Matriz Impactos MA", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                                ]
+                          },
+                          {
+                            "titulo": "Matriz Legal",
+                            "icono": "mdi-check-decagram",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAmLegal",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                    { "campo": "valor2", "name": "Matriz Legal", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor2", "header": "Matriz Legal", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                            ]
+                          },
+                          {
+                            "titulo": "Política",
+                            "icono": "mdi-note-remove-outline",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAmPolitica",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                    { "campo": "valor", "name": "Política", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor", "header": "Política", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                            ]
+                          },
+                          {
+                            "titulo": "Plan Gestión Riesgos Desastre",
+                            "icono": "mdi-note-remove-outline",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAmRiesgos",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                    { "campo": "valor", "name": "Plan Gestión Riesgos Desastre", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor", "header": "Plan Gestión Riesgos Desastre", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                            ]
+                          },
+                          {
+                            "titulo": "Gestión Ambiental",
+                            "icono": "mdi-note-remove-outline",
+                            "color":"Purple",
+                            "unidad": "",
+                            "uri":"/ma/kpi/evalDesemAmGestion",
+                            "grafico": {
+                                "categoria": "fecha",
+                                "nombre": "serie",
+                                "series": [
+                                    { "campo": "valor", "name": "Gestión Ambiental", "type": "line", "visible": true, "showInLegend": false }
+                                ]
+                                }
+                            ,
+                            "columnas": [
+                                {"nombre":"id_survey", "header": "ID", "tipo": "number"},
+                                {"nombre":"nombre", "header": "Nombre", "tipo": "string"},
+                                {"nombre":"codigo", "header": "Código", "tipo": "string"},
+                                {"nombre":"fecha_plan_ini", "header": "Fecha Plan Ini", "tipo": "fecha"},
+                                {"nombre":"fecha_real_ini", "header": "Fecha Real Ini", "tipo": "fecha"},
+                                {"nombre":"estado_srv", "header": "Estado", "tipo": "string"},
+                                {"nombre":"valor", "header": "Gestión Ambiental", "tipo": "percent"},
+                                {"nombre":"ejecutor", "header": "Ejecutor", "tipo": "string"},
+                                { "nombre": "id_doc", "header": "Documento", "tipo": "link" }
+                            ]
+                          }
+                      ]                                    
+                    },
+                    {
+                        "titulo": "Informes Ambientales",
+                        "icono": "mdi-stop-circle",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}],
+                        "indicadores": [
+                          {
+                              "titulo": "Hallazgos Acumulados",
+                              "icono": "mdi-chart-gantt",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          },
+                          {
+                              "titulo": "Hallazgos Abiertos",
+                              "icono": "mdi-check-decagram",
+                              "color":"Green",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                          },
+                          {
+                              "titulo": "Hallazgos Subsanados",
+                              "icono": "mdi-note-remove-outline",
+                              "color":"Red",
+                              "unidad": "",
+                              "uri":"",
+                              "grafico": {"categoria": "serie",
+                                  "nombre":"serie",
+                                  "series":[
+                                  {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                                  ]},
+                              "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                          {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                          }
+                      ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "export": {
+            "filename": "Logistica Norte Grandes.xlsx",
+            "hojas": [
+                {
+                    "nombre": "Lotes Recepción",
+                    "url": "/als/cc/ng/logistica/export/lotesRecepcion",
+                    "campos": [
+                        {"nombre": "PILA" , "header":"Pila"},
+                        {"nombre": "NUMERO_LOTE" , "header":"Número Lote"},
+                        {"nombre": "CANTIDAD_CAMIONES" , "header":"Cantidad Camiones"},
+                        {"nombre": "PESO_BRUTO" , "header":"Peso Bruto"},
+                        {"nombre": "TARA" , "header":"Peso Tara"},
+                        {"nombre": "TMH" , "header":"TMH"},
+                        {"nombre": "PCT_HUMEDAD" , "header":"% Humedad"},
+                        {"nombre": "DIF_ORIG_RECEP" , "header":"Diferencia Origen Recep"},
+                        {"nombre": "FECHA_CREACION" , "header":"Fecha Creación", "tipo":"fecha"},
+                        {"nombre": "FECHA_CIERRE" , "header":"Fecha Cierre", "tipo":"fecha"},
+                        {"nombre": "OBSERVACION" , "header":"Observación"}
+                       ]
+                },
+                {
+                    "nombre": "Detalle Lotes Recepción",
+                    "url": "/als/cc/ng/logistica/export/detalleLotesRecepcion",
+                    "campos": [
+                        {"nombre": "PILA" , "header":"Pila"},
+                        {"nombre": "NUMERO_LOTE" , "header":"Número Lote"},
+                        {"nombre": "NUMERO_CAMION" , "header":"Número Camión"},
+                        {"nombre": "FECHA" , "header":"Fecha", "tipo":"fecha"},
+                        {"nombre": "GUIA_DESPACHO" , "header":"Guía Despacho"},
+                        {"nombre": "PATENTE_CAMION" , "header":"Patente Camión"},
+                        {"nombre": "PATENTE_CARRO" , "header":"Patente Carro"},
+                        {"nombre": "LOTE_CODELCO" , "header":"Lote Codelco"},
+                        {"nombre": "SELLOS" , "header":"Sellos"},
+                        {"nombre": "PESO_BRUTO" , "header":"Peso Bruto"},
+                        {"nombre": "TARA" , "header":"Peso Tara"},
+                        {"nombre": "TMH_ORIG" , "header":"TMH Origen"},
+                        {"nombre": "TMH" , "header":"TMH"},
+                        {"nombre": "DIF_TMH" , "header":"Dif TMH"},
+                        {"nombre": "OBSERVACION" , "header":"Observación"}
+                       ]
+                },
+                {
+                    "nombre": "Lotes Despacho",
+                    "url": "/als/cc/ng/logistica/export/lotesDespacho",
+                    "campos": [
+                        {"nombre": "EMBARQUE" , "header":"Embarque"},
+                        {"nombre": "NUMERO_LOTE" , "header":"Número Lote"},
+                        {"nombre": "CANTIDAD_CAMIONES" , "header":"Cantidad Camiones"},
+                        {"nombre": "TARA" , "header":"Peso Tara"},
+                        {"nombre": "PESO_BRUTO" , "header":"Peso Bruto"},
+                        {"nombre": "TMH" , "header":"TMH"},
+                        {"nombre": "PCT_HUMEDAD" , "header":"% Humedad"},
+                        {"nombre": "TMS" , "header":"TMS"},
+                        {"nombre": "FECHA_CREACION" , "header":"Fecha Creación", "tipo":"fecha"},
+                        {"nombre": "FECHA_CIERRE" , "header":"Fecha Cierre", "tipo":"fecha"},
+                        {"nombre": "OBSERVACION" , "header":"Observación"}
+                       ]
+                },
+                {
+                    "nombre": "Detalle Lotes Despacho",
+                    "url": "/als/cc/ng/logistica/export/detalleLotesDespacho",
+                    "campos": [
+                        {"nombre": "EMBARQUE" , "header":"EMBAR"},
+                        {"nombre": "NUMERO_LOTE" , "header":"Número Lote"},
+                        {"nombre": "NUMERO_CAMION" , "header":"Número Camión"},
+                        {"nombre": "FECHA" , "header":"Fecha", "tipo":"fecha"},
+                        {"nombre": "GUIA_DESPACHO" , "header":"Guía Despacho"},
+                        {"nombre": "PATENTE_CAMION" , "header":"Patente Camión"},
+                        {"nombre": "PATENTE_CARRO" , "header":"Patente Carro"},
+                        {"nombre": "IDEN_ROTACONTAINER" , "header":"Iden Rotainer"},
+                        {"nombre": "SELLOS1" , "header":"Sello 1"},
+                        {"nombre": "SELLOS2" , "header":"Sello 2"},
+                        {"nombre": "SELLOS3" , "header":"Sello 3"},
+                        {"nombre": "PESO_BRUTO" , "header":"Peso Bruto"},
+                        {"nombre": "TARA" , "header":"Peso Tara"},
+                        {"nombre": "TMH" , "header":"TMH"},
+                        {"nombre": "TARA_ROTAINER" , "header":"Tara Rotainer"},
+                        {"nombre": "TMH_ROTAINER" , "header":"TMH Rotainer"},
+                        {"nombre": "OBSERVACION" , "header":"Observación"}
+                       ]
+                }
+
+            ]
+        }
+    }
+
+]

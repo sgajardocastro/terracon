@@ -1,0 +1,650 @@
+{
+    "segmentos": [
+        {
+            "label": "Registro del Trabajo (Datos del Proceso)",
+            "touch": false,
+            "posicion": 1,
+            "attributes": [
+                {
+                    "type": "textField",
+                    "label": "CONTRATISTA",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 1,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Certificadora",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 2,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "IC_SAP MG",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 3,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "nmro orden MG",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 4,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "GIO",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 5,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "datePicker",
+                    "label": "FECHA",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 6,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Dirección",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 7,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Comuna",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 8,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Cliente",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 9,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Fonos",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 10,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textArea",
+                    "label": "Observación",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 11,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Códigos",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 12,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textField",
+                    "label": "RUT",
+                    "default": "",
+                    "nullable": false,
+                    "posicion": 13,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "dateHourPicker",
+                    "label": "Hora de llegada",
+                    "default": "sysdatehhmm",
+                    "nullable": false,
+                    "posicion": 14,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR", "CNX-TRC-XADMIN"]
+                },
+                {
+                    "obs": "",
+                    "type": "photoCheck",
+                    "label": "Charla",
+                    "default": "",
+                    "galeria": [],
+                    "options": [
+                        {
+                            "id": "si",
+                            "label": "Si"
+                        },
+                        {
+                            "id": "no",
+                            "label": "No"
+                        }
+                    ],
+                    "posicion": 2,
+                    "compression": 10,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PREV"]
+                },
+                {
+                    "obs": "",
+                    "type": "photoCheck",
+                    "label": "ATS",
+                    "default": "",
+                    "galeria": [],
+                    "options": [
+                        {
+                            "id": "si",
+                            "label": "Si"
+                        },
+                        {
+                            "id": "no",
+                            "label": "No"
+                        }
+                    ],
+                    "posicion": 3,
+                    "compression": 10,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PREV"]
+                },
+                {
+                    "type": "dateHourPicker",
+                    "label": "Hr inicio",
+                    "default": "sysdatehhmm",
+                    "nullable": false,
+                    "posicion": 4,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR", "CNX-TRC-SUP"]
+                },
+                {
+                    "type": "dateHourPicker",
+                    "label": "Llegada Supervisor",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 5,
+                    "roles": ["CNX-TRC-SUP"]
+                },
+                {
+                    "type": "dateHourPicker",
+                    "label": "Llegada Sup Terracon",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 6,
+                    "roles": ["CNX-TRC-SUP"]
+                },
+                {
+                    "type": "dateHourPicker",
+                    "label": "Llegada Certificador",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 7,
+                    "roles": ["CNX-TRC-SUP"]
+                },
+                {
+                    "type": "textField",
+                    "label": "Fusionista",
+                    "default": "",
+                    "visible": false,
+                    "nullable": true,
+                    "posicion": 8,
+                    "roles": []
+                },
+                {
+                    "type": "textField",
+                    "label": "Sol Hr Fusionista",
+                    "default": "",
+                    "visible": false,
+                    "nullable": true,
+                    "posicion": 9,
+                    "roles": []
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Estado",
+                    "values": {
+                        "quest": "Seleccione Estado",
+                        "options": [
+                            {
+                                "label": "Planificación",
+                                "value": "planificacion"
+                            },
+                            {
+                                "label": "Conexión",
+                                "value": "conexion"
+                            },
+                            {
+                                "label": "Trabajo Especial",
+                                "value": "trabajo_especial"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 10,
+                    "roles": ["CNX-TRC-PLAN", "CNX-TRC-ENAR", "CNX-TRC-GTE"]
+                },
+                {
+                    "obs": "",
+                    "type": "photoCheck",
+                    "label": "T. Altura",
+                    "default": "",
+                    "galeria": [],
+                    "options": [
+                        {
+                            "id": "si",
+                            "label": "Si"
+                        },
+                        {
+                            "id": "no",
+                            "label": "No"
+                        }
+                    ],
+                    "posicion": 11,
+                    "compression": 10,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PREV"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Kit Conversión",
+                    "values": {
+                        "quest": "Kit Conversión",
+                        "options": [
+                            {
+                                "label": "S/Información",
+                                "value": "sin_informacion"
+                            },
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "No Cumple",
+                                "value": "no_cumple"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 12,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Medidor/Capsula",
+                    "values": {
+                        "quest": "Medidor/Capsula",
+                        "options": [
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            },
+                            {
+                                "label": "Medidor Abastible",
+                                "value": "medidor_abastible"
+                            },
+                            {
+                                "label": "Gasco",
+                                "value": "gasco"
+                            },
+                            {
+                                "label": "Metrogas",
+                                "value": "metrogas"
+                            },
+                            {
+                                "label": "Lipigas",
+                                "value": "lipigas"
+                            },
+                            {
+                                "label": "Otro",
+                                "value": "otro"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 13,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Ducto",
+                    "values": {
+                        "quest": "Tipo de Ducto",
+                        "options": [
+                            {
+                                "label": "Media",
+                                "value": "media"
+                            },
+                            {
+                                "label": "Alta",
+                                "value": "alta"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 14,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Retiro Artef",
+                    "values": {
+                        "quest": "Bodega Retiro Artefacto",
+                        "options": [
+                            {
+                                "label": "Bodega Metrogas",
+                                "value": "metrogas"
+                            },
+                            {
+                                "label": "Ñuñoa",
+                                "value": "nunoa"
+                            },
+                            {
+                                "label": "Puente Alto",
+                                "value": "puente_alto"
+                            },
+                            {
+                                "label": "Pudahuel",
+                                "value": "pudahuel"
+                            },
+                            {
+                                "label": "Renca",
+                                "value": "renca"
+                            },
+                            {
+                                "label": "Terracon",
+                                "value": "terracon"
+                            },
+                            {
+                                "label": "Compra Terracon",
+                                "value": "compra_terracon"
+                            },
+                            {
+                                "label": "Móvil Metrogas",
+                                "value": "movil_metrogas"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 15,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Retiro Kit",
+                    "values": {
+                        "quest": "Bodega Retiro Kit",
+                        "options": [
+                            {
+                                "label": "Bodega Metrogas",
+                                "value": "metrogas"
+                            },
+                            {
+                                "label": "Ñuñoa",
+                                "value": "nunoa"
+                            },
+                            {
+                                "label": "Puente Alto",
+                                "value": "puente_alto"
+                            },
+                            {
+                                "label": "Pudahuel",
+                                "value": "pudahuel"
+                            },
+                            {
+                                "label": "Renca",
+                                "value": "renca"
+                            },
+                            {
+                                "label": "Terracon",
+                                "value": "terracon"
+                            },
+                            {
+                                "label": "Compra Terracon",
+                                "value": "compra_terracon"
+                            },
+                            {
+                                "label": "Móvil Metrogas",
+                                "value": "movil_metrogas"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 16,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "PHI",
+                    "values": {
+                        "quest": "Estado PHI",
+                        "options": [
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "Con Fuga",
+                                "value": "con_fuga"
+                            },
+                            {
+                                "label": "En Ejecución",
+                                "value": "en_ejecucion"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 17,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "PHF",
+                    "values": {
+                        "quest": "Estado PHF",
+                        "options": [
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "Con Fuga",
+                                "value": "con_fuga"
+                            },
+                            {
+                                "label": "En Ejecución",
+                                "value": "en_ejecucion"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 18,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Cierre Supervisor",
+                    "values": {
+                        "quest": "Cierre Supervisor",
+                        "options": [
+                            {
+                                "label": "En Ejecución",
+                                "value": "en_ejecucion"
+                            },
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "Pendiente",
+                                "value": "pendiente"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 19,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "R.U.V.",
+                    "values": {
+                        "quest": "Estado R.U.V.",
+                        "options": [
+                            {
+                                "label": "En Ejecución",
+                                "value": "en_ejecucion"
+                            },
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "Pendiente",
+                                "value": "pendiente"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 20,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "comboBox",
+                    "label": "Cierre Cliente",
+                    "values": {
+                        "quest": "Cierre Cliente",
+                        "options": [
+                            {
+                                "label": "En Ejecución",
+                                "value": "en_ejecucion"
+                            },
+                            {
+                                "label": "Cumple",
+                                "value": "cumple"
+                            },
+                            {
+                                "label": "Pendiente",
+                                "value": "pendiente"
+                            },
+                            {
+                                "label": "No Aplica",
+                                "value": "no_aplica"
+                            }
+                        ],
+                        "selected": null
+                    },
+                    "nullable": false,
+                    "posicion": 21,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textArea",
+                    "label": "Observaciones",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 22,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "decimal",
+                    "label": "mts Cañería",
+                    "default": "",
+                    "cantiDec": 2,
+                    "nullable": false,
+                    "posicion": 23,
+                    "roles": ["CNX-TRC-XADMIN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "number",
+                    "label": "Día Ejec",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 24,
+                    "readOnly": true,
+                    "roles": []
+                },
+                {
+                    "type": "textArea",
+                    "label": "Artefac",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 25,
+                    "roles": ["CNX-TRC-XADMIN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textArea",
+                    "label": "Convers Artefac",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 26,
+                    "roles": ["CNX-TRC-XADMIN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "textArea",
+                    "label": "Estado Pend",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 27,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-PLAN", "CNX-TRC-ENAR"]
+                },
+                {
+                    "max": 7,
+                    "min": 1,
+                    "type": "number",
+                    "label": "Evaluación",
+                    "default": "",
+                    "nullable": true,
+                    "posicion": 28,
+                    "roles": ["CNX-TRC-SUP", "CNX-TRC-ENAR"]
+                },
+                {
+                    "type": "decimal",
+                    "label": "Costo Contratista Neto UF",
+                    "default": "",
+                    "cantiDec": 2,
+                    "nullable": true,
+                    "posicion": 29,
+                    "roles": ["CNX-TRC-XADMIN", "CNX-TRC-ENAR"]
+                }
+            ],
+            "collapsible": false
+        }
+    ]
+}

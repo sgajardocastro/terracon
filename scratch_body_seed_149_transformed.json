@@ -1,0 +1,886 @@
+{
+  "segmentos": [
+    {
+      "label": "1.- Análisis de Riesgos",
+      "touch": true,
+      "posicion": 1,
+      "attributes": [
+        {
+          "id": "checklist_riesgos",
+          "type": "checkList",
+          "posicion": 2,
+          "checkBoby": [
+            {
+              "id": "chk_riesgos_1",
+              "obs": "",
+              "label": "Heridas Cortantes",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_2",
+              "obs": "",
+              "label": "Choque Eléctrico",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_3",
+              "obs": "",
+              "label": "Caída a Mismo Nivel",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_4",
+              "obs": "",
+              "label": "Caída a Distinto Nivel",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_5",
+              "obs": "",
+              "label": "Ruido",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_6",
+              "obs": "",
+              "label": "Proyección de Partículas",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_7",
+              "obs": "",
+              "label": "Golpes",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_riesgos_8",
+              "obs": "",
+              "label": "Radiación UV",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            }
+          ]
+        },
+        {
+          "id": "otro_riesgo",
+          "type": "textField",
+          "label": "Otro, ¿cual?",
+          "default": "",
+          "nullable": true,
+          "posicion": 3
+        }
+      ],
+      "collapsible": false
+    },
+    {
+      "label": "2.- Equipo de Protección Personal",
+      "touch": true,
+      "posicion": 2,
+      "attributes": [
+        {
+          "id": "checklist_epp",
+          "type": "checkList",
+          "posicion": 4,
+          "checkBoby": [
+            {
+              "id": "chk_epp_1",
+              "obs": "",
+              "label": "Guantes",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_2",
+              "obs": "",
+              "label": "Lente de Seguridad",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_3",
+              "obs": "",
+              "label": "Arnés y Cabo de Vida",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_4",
+              "obs": "",
+              "label": "Casco",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_5",
+              "obs": "",
+              "label": "Barboquejo",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_6",
+              "obs": "",
+              "label": "Protección Auditiva",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_7",
+              "obs": "",
+              "label": "Calzado de Seguridad",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_8",
+              "obs": "",
+              "label": "Protector Solar F50",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_9",
+              "obs": "",
+              "label": "Careta Fasial",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epp_10",
+              "obs": "",
+              "label": "Ropa de cuero",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            }
+          ]
+        },
+        {
+          "id": "otro_epp",
+          "type": "textField",
+          "label": "Otros:",
+          "default": "",
+          "nullable": true,
+          "posicion": 5
+        }
+      ],
+      "collapsible": false
+    },
+    {
+      "label": "3.- Equipo de Protección Colectiva",
+      "touch": true,
+      "posicion": 3,
+      "attributes": [
+        {
+          "id": "checklist_epc",
+          "type": "checkList",
+          "posicion": 6,
+          "checkBoby": [
+            {
+              "id": "chk_epc_1",
+              "obs": "",
+              "label": "Cinta de Seguridad",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_2",
+              "obs": "",
+              "label": "Pantalla de Seguridad",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_3",
+              "obs": "",
+              "label": "Señalética",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_4",
+              "obs": "",
+              "label": "Línea de vida",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_5",
+              "obs": "",
+              "label": "Manta Ignífuga",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_6",
+              "obs": "",
+              "label": "Extintor PQS",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_7",
+              "obs": "",
+              "label": "Acceso expedito a extintor y vías de acceso",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_epc_8",
+              "obs": "",
+              "label": "Extensiones eléctricas vía aérea.",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            }
+          ]
+        },
+        {
+          "id": "otro_epc",
+          "type": "textField",
+          "label": "Otros ¿cuál?",
+          "default": "",
+          "nullable": true,
+          "posicion": 7
+        }
+      ],
+      "collapsible": false
+    },
+    {
+      "label": "4.- Verificar Condiciones de Seguridad",
+      "touch": true,
+      "posicion": 4,
+      "attributes": [
+        {
+          "id": "checklist_verificacion",
+          "type": "checkList",
+          "posicion": 8,
+          "checkBoby": [
+            {
+              "id": "chk_v_1",
+              "obs": "",
+              "label": "4.1 El area de trabajo se encuentra alejado de materiales combustibles y/o se protegen con mantas ingnífugas las zonas críticas",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_2",
+              "obs": "",
+              "label": "4.2 El operador es competente para realizar la actividad según descripción de cargo",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_3",
+              "obs": "",
+              "label": "4.3 Los Operadores fueron informados sobre los riesgos y medidas de control, cuentan con capacitaciones y autorización para operar la herramienta",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_4",
+              "obs": "",
+              "label": "4.4 ¿Es Necesario un Observador en el área de trabajo?",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_5",
+              "obs": "",
+              "label": "4.5 Fueron Considerados los Riesgos en las Áreas Adyacentes",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_6",
+              "obs": "",
+              "label": "4.6 El equipo se encuentra en buenas condiciones, con todas sus protecciones instaladas y con código de color correspondiente al mes",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_7",
+              "obs": "",
+              "label": "4.7 Las extensiones y tableros eléctricos cumplen norma y están en buen estado",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_8",
+              "obs": "",
+              "label": "4.8 Se cuenta con Superficie de Corte debidamente habilitada, acorde a las características del material, se encuentra limpia, seca y ordenada",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_9",
+              "obs": "",
+              "label": "4.9 El material a cortar, se encuentra bien posicionado, despejado, sin tensión en la estructura que pueda generar un efecto látigo",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_10",
+              "obs": "",
+              "label": "4.10 Se cumple con procedimientos de trabajo seguro (PTS) según tipo de faena",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_11",
+              "obs": "",
+              "label": "4.11 Se cumple con procedimientos de análisis de seguridad en el trabajo (AST), según tipo de faena",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            },
+            {
+              "id": "chk_v_12",
+              "obs": "",
+              "label": "4.12 El disco, se encuentra en buen estado y es concordante con la tarea y diámetro del equipo",
+              "default": "",
+              "options": [
+                {
+                  "id": "si",
+                  "label": "Si"
+                },
+                {
+                  "id": "no",
+                  "label": "No"
+                },
+                {
+                  "id": "na",
+                  "label": "Na"
+                }
+              ],
+              "nullable": false
+            }
+          ]
+        }
+      ],
+      "collapsible": false
+    }
+  ]
+}

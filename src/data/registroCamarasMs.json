@@ -1,0 +1,2304 @@
+{
+  "meta": {
+    "source": "Registro de Cámaras -MS (1).xlsx",
+    "sheet": "Hoja1",
+    "total": 101,
+    "columns": {
+      "item": "Item",
+      "oleoducto": "Oleoducto",
+      "nombreCamara": "Nombre Cámara",
+      "linea": "Línea",
+      "pk": "PK",
+      "pkKm": "PK en kilometros decimales"
+    }
+  },
+  "options": {
+    "oleoductos": [
+      "CCM",
+      "MAAMB",
+      "QCC",
+      "SFDOM"
+    ],
+    "lineas": [
+      "LPG",
+      "LPG-PL",
+      "PL"
+    ],
+    "pk": [
+      "00+000",
+      "00+050",
+      "1+400",
+      "2+525",
+      "4+100",
+      "4+101",
+      "5+080",
+      "5+800",
+      "6+900",
+      "7+570",
+      "7+620",
+      "7+650",
+      "7+710",
+      "8+300",
+      "9+525",
+      "10+480",
+      "10+750",
+      "11+180",
+      "11+450",
+      "11+900",
+      "14+960",
+      "15+000",
+      "15+420",
+      "15+600",
+      "16+800",
+      "17+860",
+      "18+600",
+      "19+060",
+      "19+800",
+      "22+070",
+      "24+530",
+      "25+360",
+      "28+360",
+      "32+800",
+      "34+180",
+      "34+560",
+      "38+000",
+      "40+200",
+      "40+580",
+      "42+380",
+      "49+350",
+      "50+747",
+      "52+300",
+      "60+590",
+      "64+900",
+      "69+100",
+      "71+270",
+      "72+470",
+      "74+740",
+      "75+000",
+      "81+390",
+      "85+040",
+      "92+600",
+      "93+570",
+      "94+060",
+      "97+800",
+      "103+170",
+      "103+800",
+      "105+160",
+      "106+438",
+      "110+000",
+      "111+100",
+      "111+370",
+      "112+060",
+      "113+800",
+      "122+300",
+      "123+360",
+      "125+700",
+      "129+300",
+      "134+100"
+    ]
+  },
+  "records": [
+    {
+      "id": "cam-001",
+      "item": 1,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "2+525",
+      "pkKm": 2.525,
+      "nombreCamara": "Las Garzas LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "2+525",
+        "nombreCamara": "LAS GARZAS LPG",
+        "search": "QCC LPG 2+525 LAS GARZAS LPG"
+      }
+    },
+    {
+      "id": "cam-002",
+      "item": 2,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "6+900",
+      "pkKm": 6.9,
+      "nombreCamara": "Santa Julia Norte PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "6+900",
+        "nombreCamara": "SANTA JULIA NORTE PL",
+        "search": "QCC PL 6+900 SANTA JULIA NORTE PL"
+      }
+    },
+    {
+      "id": "cam-003",
+      "item": 3,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "7+570",
+      "pkKm": 7.57,
+      "nombreCamara": "Santa Julia Norte LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "7+570",
+        "nombreCamara": "SANTA JULIA NORTE LPG",
+        "search": "QCC LPG 7+570 SANTA JULIA NORTE LPG"
+      }
+    },
+    {
+      "id": "cam-004",
+      "item": 4,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "7+650",
+      "pkKm": 7.65,
+      "nombreCamara": "Santa Julia Sur PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "7+650",
+        "nombreCamara": "SANTA JULIA SUR PL",
+        "search": "QCC PL 7+650 SANTA JULIA SUR PL"
+      }
+    },
+    {
+      "id": "cam-005",
+      "item": 5,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "8+300",
+      "pkKm": 8.3,
+      "nombreCamara": "Santa Julia Sur LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "8+300",
+        "nombreCamara": "SANTA JULIA SUR LPG",
+        "search": "QCC LPG 8+300 SANTA JULIA SUR LPG"
+      }
+    },
+    {
+      "id": "cam-006",
+      "item": 6,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "10+750",
+      "pkKm": 10.75,
+      "nombreCamara": "Mantagua Norte PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "10+750",
+        "nombreCamara": "MANTAGUA NORTE PL",
+        "search": "QCC PL 10+750 MANTAGUA NORTE PL"
+      }
+    },
+    {
+      "id": "cam-007",
+      "item": 7,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "11+450",
+      "pkKm": 11.45,
+      "nombreCamara": "Mantagua Norte LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "11+450",
+        "nombreCamara": "MANTAGUA NORTE LPG",
+        "search": "QCC LPG 11+450 MANTAGUA NORTE LPG"
+      }
+    },
+    {
+      "id": "cam-008",
+      "item": 8,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "11+180",
+      "pkKm": 11.18,
+      "nombreCamara": "Mantagua Sur PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "11+180",
+        "nombreCamara": "MANTAGUA SUR PL",
+        "search": "QCC PL 11+180 MANTAGUA SUR PL"
+      }
+    },
+    {
+      "id": "cam-009",
+      "item": 9,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "11+900",
+      "pkKm": 11.9,
+      "nombreCamara": "Mantagua Sur LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "11+900",
+        "nombreCamara": "MANTAGUA SUR LPG",
+        "search": "QCC LPG 11+900 MANTAGUA SUR LPG"
+      }
+    },
+    {
+      "id": "cam-010",
+      "item": 10,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "14+960",
+      "pkKm": 14.96,
+      "nombreCamara": "Santa Luisa 10'' PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "14+960",
+        "nombreCamara": "SANTA LUISA 10'' PL",
+        "search": "QCC PL 14+960 SANTA LUISA 10'' PL"
+      }
+    },
+    {
+      "id": "cam-011",
+      "item": 11,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "15+000",
+      "pkKm": 15,
+      "nombreCamara": "Santa Luisa 10'' LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "15+000",
+        "nombreCamara": "SANTA LUISA 10'' LPG",
+        "search": "QCC LPG 15+000 SANTA LUISA 10'' LPG"
+      }
+    },
+    {
+      "id": "cam-012",
+      "item": 12,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "17+860",
+      "pkKm": 17.86,
+      "nombreCamara": "Aconcagua Norte PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "17+860",
+        "nombreCamara": "ACONCAGUA NORTE PL",
+        "search": "QCC PL 17+860 ACONCAGUA NORTE PL"
+      }
+    },
+    {
+      "id": "cam-013",
+      "item": 13,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "18+600",
+      "pkKm": 18.6,
+      "nombreCamara": "Aconcagua Norte LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "18+600",
+        "nombreCamara": "ACONCAGUA NORTE LPG",
+        "search": "QCC LPG 18+600 ACONCAGUA NORTE LPG"
+      }
+    },
+    {
+      "id": "cam-014",
+      "item": 14,
+      "oleoducto": "QCC",
+      "linea": "LPG",
+      "pk": "18+600",
+      "pkKm": 18.6,
+      "nombreCamara": "Aconcagua Sur LPG",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "LPG",
+        "pk": "18+600",
+        "nombreCamara": "ACONCAGUA SUR LPG",
+        "search": "QCC LPG 18+600 ACONCAGUA SUR LPG"
+      }
+    },
+    {
+      "id": "cam-015",
+      "item": 15,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "19+060",
+      "pkKm": 19.06,
+      "nombreCamara": "La Jarilla PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "19+060",
+        "nombreCamara": "LA JARILLA PL",
+        "search": "QCC PL 19+060 LA JARILLA PL"
+      }
+    },
+    {
+      "id": "cam-016",
+      "item": 16,
+      "oleoducto": "QCC",
+      "linea": "PL",
+      "pk": "19+800",
+      "pkKm": 19.8,
+      "nombreCamara": "Copec Concon PL",
+      "keys": {
+        "oleoducto": "QCC",
+        "linea": "PL",
+        "pk": "19+800",
+        "nombreCamara": "COPEC CONCON PL",
+        "search": "QCC PL 19+800 COPEC CONCON PL"
+      }
+    },
+    {
+      "id": "cam-017",
+      "item": 17,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "40+200",
+      "pkKm": 40.2,
+      "nombreCamara": "Los Perales Poniente LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "40+200",
+        "nombreCamara": "LOS PERALES PONIENTE LPG",
+        "search": "CCM LPG 40+200 LOS PERALES PONIENTE LPG"
+      }
+    },
+    {
+      "id": "cam-018",
+      "item": 18,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "40+200",
+      "pkKm": 40.2,
+      "nombreCamara": "Los Perales Poniente PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "40+200",
+        "nombreCamara": "LOS PERALES PONIENTE PL",
+        "search": "CCM PL 40+200 LOS PERALES PONIENTE PL"
+      }
+    },
+    {
+      "id": "cam-019",
+      "item": 19,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "40+580",
+      "pkKm": 40.58,
+      "nombreCamara": "Los Perales Oriente LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "40+580",
+        "nombreCamara": "LOS PERALES ORIENTE LPG",
+        "search": "CCM LPG 40+580 LOS PERALES ORIENTE LPG"
+      }
+    },
+    {
+      "id": "cam-020",
+      "item": 20,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "40+580",
+      "pkKm": 40.58,
+      "nombreCamara": "Los Perales Oriente PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "40+580",
+        "nombreCamara": "LOS PERALES ORIENTE PL",
+        "search": "CCM PL 40+580 LOS PERALES ORIENTE PL"
+      }
+    },
+    {
+      "id": "cam-021",
+      "item": 21,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "69+100",
+      "pkKm": 69.1,
+      "nombreCamara": "Veramonte - Zapata PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "69+100",
+        "nombreCamara": "VERAMONTE - ZAPATA PL",
+        "search": "CCM PL 69+100 VERAMONTE - ZAPATA PL"
+      }
+    },
+    {
+      "id": "cam-022",
+      "item": 22,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "71+270",
+      "pkKm": 71.27,
+      "nombreCamara": "Veramonte - Zapata LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "71+270",
+        "nombreCamara": "VERAMONTE - ZAPATA LPG",
+        "search": "CCM LPG 71+270 VERAMONTE - ZAPATA LPG"
+      }
+    },
+    {
+      "id": "cam-023",
+      "item": 23,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "71+270",
+      "pkKm": 71.27,
+      "nombreCamara": "Veramonte - Zapata LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "71+270",
+        "nombreCamara": "VERAMONTE - ZAPATA LPG",
+        "search": "CCM LPG 71+270 VERAMONTE - ZAPATA LPG"
+      }
+    },
+    {
+      "id": "cam-024",
+      "item": 24,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "72+470",
+      "pkKm": 72.47,
+      "nombreCamara": "Cumbre Zapata PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "72+470",
+        "nombreCamara": "CUMBRE ZAPATA PL",
+        "search": "CCM PL 72+470 CUMBRE ZAPATA PL"
+      }
+    },
+    {
+      "id": "cam-025",
+      "item": 25,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "72+470",
+      "pkKm": 72.47,
+      "nombreCamara": "Cumbre Zapata LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "72+470",
+        "nombreCamara": "CUMBRE ZAPATA LPG",
+        "search": "CCM LPG 72+470 CUMBRE ZAPATA LPG"
+      }
+    },
+    {
+      "id": "cam-026",
+      "item": 26,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "74+740",
+      "pkKm": 74.74,
+      "nombreCamara": "San Jose LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "74+740",
+        "nombreCamara": "SAN JOSE LPG",
+        "search": "CCM LPG 74+740 SAN JOSE LPG"
+      }
+    },
+    {
+      "id": "cam-027",
+      "item": 27,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "74+740",
+      "pkKm": 74.74,
+      "nombreCamara": "San Jose PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "74+740",
+        "nombreCamara": "SAN JOSE PL",
+        "search": "CCM PL 74+740 SAN JOSE PL"
+      }
+    },
+    {
+      "id": "cam-028",
+      "item": 28,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "81+390",
+      "pkKm": 81.39,
+      "nombreCamara": "La Fragua LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "81+390",
+        "nombreCamara": "LA FRAGUA LPG",
+        "search": "CCM LPG 81+390 LA FRAGUA LPG"
+      }
+    },
+    {
+      "id": "cam-029",
+      "item": 29,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "81+390",
+      "pkKm": 81.39,
+      "nombreCamara": "La Fragua PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "81+390",
+        "nombreCamara": "LA FRAGUA PL",
+        "search": "CCM PL 81+390 LA FRAGUA PL"
+      }
+    },
+    {
+      "id": "cam-030",
+      "item": 30,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "93+570",
+      "pkKm": 93.57,
+      "nombreCamara": "Puangue Poniente LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "93+570",
+        "nombreCamara": "PUANGUE PONIENTE LPG",
+        "search": "CCM LPG 93+570 PUANGUE PONIENTE LPG"
+      }
+    },
+    {
+      "id": "cam-031",
+      "item": 31,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "93+570",
+      "pkKm": 93.57,
+      "nombreCamara": "Puangue Poniente PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "93+570",
+        "nombreCamara": "PUANGUE PONIENTE PL",
+        "search": "CCM PL 93+570 PUANGUE PONIENTE PL"
+      }
+    },
+    {
+      "id": "cam-032",
+      "item": 32,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "103+800",
+      "pkKm": 103.8,
+      "nombreCamara": "Santa Ines LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "103+800",
+        "nombreCamara": "SANTA INES LPG",
+        "search": "CCM LPG 103+800 SANTA INES LPG"
+      }
+    },
+    {
+      "id": "cam-033",
+      "item": 33,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "103+800",
+      "pkKm": 103.8,
+      "nombreCamara": "Santa Ines PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "103+800",
+        "nombreCamara": "SANTA INES PL",
+        "search": "CCM PL 103+800 SANTA INES PL"
+      }
+    },
+    {
+      "id": "cam-034",
+      "item": 34,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "106+438",
+      "pkKm": 106.438,
+      "nombreCamara": "Pataguilla LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "106+438",
+        "nombreCamara": "PATAGUILLA LPG",
+        "search": "CCM LPG 106+438 PATAGUILLA LPG"
+      }
+    },
+    {
+      "id": "cam-035",
+      "item": 35,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "106+438",
+      "pkKm": 106.438,
+      "nombreCamara": "Pataguilla PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "106+438",
+        "nombreCamara": "PATAGUILLA PL",
+        "search": "CCM PL 106+438 PATAGUILLA PL"
+      }
+    },
+    {
+      "id": "cam-036",
+      "item": 36,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "125+700",
+      "pkKm": 125.7,
+      "nombreCamara": "Mapocho Oriente LPG (Lado CC)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "125+700",
+        "nombreCamara": "MAPOCHO ORIENTE LPG (LADO CC)",
+        "search": "CCM LPG 125+700 MAPOCHO ORIENTE LPG (LADO CC)"
+      }
+    },
+    {
+      "id": "cam-037",
+      "item": 37,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "125+700",
+      "pkKm": 125.7,
+      "nombreCamara": "Mapocho Oriente PL (Lado CC)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "125+700",
+        "nombreCamara": "MAPOCHO ORIENTE PL (LADO CC)",
+        "search": "CCM PL 125+700 MAPOCHO ORIENTE PL (LADO CC)"
+      }
+    },
+    {
+      "id": "cam-038",
+      "item": 38,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "129+300",
+      "pkKm": 129.3,
+      "nombreCamara": "Pollos King LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "129+300",
+        "nombreCamara": "POLLOS KING LPG",
+        "search": "CCM LPG 129+300 POLLOS KING LPG"
+      }
+    },
+    {
+      "id": "cam-039",
+      "item": 39,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "129+300",
+      "pkKm": 129.3,
+      "nombreCamara": "Pollos King PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "129+300",
+        "nombreCamara": "POLLOS KING PL",
+        "search": "CCM PL 129+300 POLLOS KING PL"
+      }
+    },
+    {
+      "id": "cam-040",
+      "item": 40,
+      "oleoducto": "CCM",
+      "linea": "LPG-PL",
+      "pk": "134+100",
+      "pkKm": 134.1,
+      "nombreCamara": "Santa Marta (Las Industrias)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG-PL",
+        "pk": "134+100",
+        "nombreCamara": "SANTA MARTA (LAS INDUSTRIAS)",
+        "search": "CCM LPG-PL 134+100 SANTA MARTA (LAS INDUSTRIAS)"
+      }
+    },
+    {
+      "id": "cam-041",
+      "item": 41,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "22+070",
+      "pkKm": 22.07,
+      "nombreCamara": "Acueducto PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "22+070",
+        "nombreCamara": "ACUEDUCTO PL",
+        "search": "CCM PL 22+070 ACUEDUCTO PL"
+      }
+    },
+    {
+      "id": "cam-042",
+      "item": 42,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "22+070",
+      "pkKm": 22.07,
+      "nombreCamara": "Acueducto LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "22+070",
+        "nombreCamara": "ACUEDUCTO LPG",
+        "search": "CCM LPG 22+070 ACUEDUCTO LPG"
+      }
+    },
+    {
+      "id": "cam-043",
+      "item": 43,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "94+060",
+      "pkKm": 94.06,
+      "nombreCamara": "Puangue Oriente LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "94+060",
+        "nombreCamara": "PUANGUE ORIENTE LPG",
+        "search": "CCM LPG 94+060 PUANGUE ORIENTE LPG"
+      }
+    },
+    {
+      "id": "cam-044",
+      "item": 44,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "94+060",
+      "pkKm": 94.06,
+      "nombreCamara": "Puangue Oriente PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "94+060",
+        "nombreCamara": "PUANGUE ORIENTE PL",
+        "search": "CCM PL 94+060 PUANGUE ORIENTE PL"
+      }
+    },
+    {
+      "id": "cam-045",
+      "item": 45,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "112+060",
+      "pkKm": 112.06,
+      "nombreCamara": "Cuesta Barriga LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "112+060",
+        "nombreCamara": "CUESTA BARRIGA LPG",
+        "search": "CCM LPG 112+060 CUESTA BARRIGA LPG"
+      }
+    },
+    {
+      "id": "cam-046",
+      "item": 46,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "112+060",
+      "pkKm": 112.06,
+      "nombreCamara": "Cuesta Barriga PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "112+060",
+        "nombreCamara": "CUESTA BARRIGA PL",
+        "search": "CCM PL 112+060 CUESTA BARRIGA PL"
+      }
+    },
+    {
+      "id": "cam-047",
+      "item": 47,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "28+360",
+      "pkKm": 28.36,
+      "nombreCamara": "Quebrada Escobares PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "28+360",
+        "nombreCamara": "QUEBRADA ESCOBARES PL",
+        "search": "CCM PL 28+360 QUEBRADA ESCOBARES PL"
+      }
+    },
+    {
+      "id": "cam-048",
+      "item": 48,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "28+360",
+      "pkKm": 28.36,
+      "nombreCamara": "Quebrada Escobares LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "28+360",
+        "nombreCamara": "QUEBRADA ESCOBARES LPG",
+        "search": "CCM LPG 28+360 QUEBRADA ESCOBARES LPG"
+      }
+    },
+    {
+      "id": "cam-049",
+      "item": 49,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "7+620",
+      "pkKm": 7.62,
+      "nombreCamara": "Reñaca Alto Norte LPG (Lado CC)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "7+620",
+        "nombreCamara": "RENACA ALTO NORTE LPG (LADO CC)",
+        "search": "CCM LPG 7+620 RENACA ALTO NORTE LPG (LADO CC)"
+      }
+    },
+    {
+      "id": "cam-050",
+      "item": 50,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "7+710",
+      "pkKm": 7.71,
+      "nombreCamara": "Reñaca Alto PL(lado sur-Maipú)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "7+710",
+        "nombreCamara": "RENACA ALTO PL(LADO SUR-MAIPU)",
+        "search": "CCM PL 7+710 RENACA ALTO PL(LADO SUR-MAIPU)"
+      }
+    },
+    {
+      "id": "cam-051",
+      "item": 51,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "9+525",
+      "pkKm": 9.525,
+      "nombreCamara": "Los Claveles LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "9+525",
+        "nombreCamara": "LOS CLAVELES LPG",
+        "search": "CCM LPG 9+525 LOS CLAVELES LPG"
+      }
+    },
+    {
+      "id": "cam-052",
+      "item": 52,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "10+480",
+      "pkKm": 10.48,
+      "nombreCamara": "Quebrada El Condor LPG (Lado ConCon)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "10+480",
+        "nombreCamara": "QUEBRADA EL CONDOR LPG (LADO CONCON)",
+        "search": "CCM LPG 10+480 QUEBRADA EL CONDOR LPG (LADO CONCON)"
+      }
+    },
+    {
+      "id": "cam-053",
+      "item": 53,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "10+480",
+      "pkKm": 10.48,
+      "nombreCamara": "Quebrada El Condor PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "10+480",
+        "nombreCamara": "QUEBRADA EL CONDOR PL",
+        "search": "CCM PL 10+480 QUEBRADA EL CONDOR PL"
+      }
+    },
+    {
+      "id": "cam-054",
+      "item": 54,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "113+800",
+      "pkKm": 113.8,
+      "nombreCamara": "Santa Monica LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "113+800",
+        "nombreCamara": "SANTA MONICA LPG",
+        "search": "CCM LPG 113+800 SANTA MONICA LPG"
+      }
+    },
+    {
+      "id": "cam-055",
+      "item": 55,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "113+800",
+      "pkKm": 113.8,
+      "nombreCamara": "Santa Monica PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "113+800",
+        "nombreCamara": "SANTA MONICA PL",
+        "search": "CCM PL 113+800 SANTA MONICA PL"
+      }
+    },
+    {
+      "id": "cam-056",
+      "item": 56,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "123+360",
+      "pkKm": 123.36,
+      "nombreCamara": "Mapocho Poniente LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "123+360",
+        "nombreCamara": "MAPOCHO PONIENTE LPG",
+        "search": "CCM LPG 123+360 MAPOCHO PONIENTE LPG"
+      }
+    },
+    {
+      "id": "cam-057",
+      "item": 57,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "123+360",
+      "pkKm": 123.36,
+      "nombreCamara": "Mapocho Poniente PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "123+360",
+        "nombreCamara": "MAPOCHO PONIENTE PL",
+        "search": "CCM PL 123+360 MAPOCHO PONIENTE PL"
+      }
+    },
+    {
+      "id": "cam-058",
+      "item": 58,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "125+700",
+      "pkKm": 125.7,
+      "nombreCamara": "Mapocho Oriente LPG (Lado Maipú)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "125+700",
+        "nombreCamara": "MAPOCHO ORIENTE LPG (LADO MAIPU)",
+        "search": "CCM LPG 125+700 MAPOCHO ORIENTE LPG (LADO MAIPU)"
+      }
+    },
+    {
+      "id": "cam-059",
+      "item": 59,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "125+700",
+      "pkKm": 125.7,
+      "nombreCamara": "Mapocho Oriente PL ( Lado Maipú)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "125+700",
+        "nombreCamara": "MAPOCHO ORIENTE PL ( LADO MAIPU)",
+        "search": "CCM PL 125+700 MAPOCHO ORIENTE PL ( LADO MAIPU)"
+      }
+    },
+    {
+      "id": "cam-060",
+      "item": 60,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "10+480",
+      "pkKm": 10.48,
+      "nombreCamara": "Quebrada El Condor LPG (Lado Maipu)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "10+480",
+        "nombreCamara": "QUEBRADA EL CONDOR LPG (LADO MAIPU)",
+        "search": "CCM LPG 10+480 QUEBRADA EL CONDOR LPG (LADO MAIPU)"
+      }
+    },
+    {
+      "id": "cam-061",
+      "item": 61,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "4+100",
+      "pkKm": 4.1,
+      "nombreCamara": "La Cantera LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "4+100",
+        "nombreCamara": "LA CANTERA LPG",
+        "search": "CCM LPG 4+100 LA CANTERA LPG"
+      }
+    },
+    {
+      "id": "cam-062",
+      "item": 62,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "4+100",
+      "pkKm": 4.1,
+      "nombreCamara": "La Cantera PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "4+100",
+        "nombreCamara": "LA CANTERA PL",
+        "search": "CCM PL 4+100 LA CANTERA PL"
+      }
+    },
+    {
+      "id": "cam-063",
+      "item": 63,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "4+101",
+      "pkKm": 4.101,
+      "nombreCamara": "La Cantera LPG (Sin Operación)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "4+101",
+        "nombreCamara": "LA CANTERA LPG (SIN OPERACION)",
+        "search": "CCM PL 4+101 LA CANTERA LPG (SIN OPERACION)"
+      }
+    },
+    {
+      "id": "cam-064",
+      "item": 64,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "97+800",
+      "pkKm": 97.8,
+      "nombreCamara": "Los Pavos LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "97+800",
+        "nombreCamara": "LOS PAVOS LPG",
+        "search": "CCM LPG 97+800 LOS PAVOS LPG"
+      }
+    },
+    {
+      "id": "cam-065",
+      "item": 65,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "7+620",
+      "pkKm": 7.62,
+      "nombreCamara": "Reñaca Alto Norte  PL (Lado CC)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "7+620",
+        "nombreCamara": "RENACA ALTO NORTE  PL (LADO CC)",
+        "search": "CCM PL 7+620 RENACA ALTO NORTE  PL (LADO CC)"
+      }
+    },
+    {
+      "id": "cam-066",
+      "item": 66,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "7+710",
+      "pkKm": 7.71,
+      "nombreCamara": "Reñaca Alto LPG (lado sur- Maipú)",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "7+710",
+        "nombreCamara": "RENACA ALTO LPG (LADO SUR- MAIPU)",
+        "search": "CCM LPG 7+710 RENACA ALTO LPG (LADO SUR- MAIPU)"
+      }
+    },
+    {
+      "id": "cam-067",
+      "item": 67,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "60+590",
+      "pkKm": 60.59,
+      "nombreCamara": "La Vega LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "60+590",
+        "nombreCamara": "LA VEGA LPG",
+        "search": "CCM LPG 60+590 LA VEGA LPG"
+      }
+    },
+    {
+      "id": "cam-068",
+      "item": 68,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "60+590",
+      "pkKm": 60.59,
+      "nombreCamara": "La Vega PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "60+590",
+        "nombreCamara": "LA VEGA PL",
+        "search": "CCM PL 60+590 LA VEGA PL"
+      }
+    },
+    {
+      "id": "cam-069",
+      "item": 69,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "50+747",
+      "pkKm": 50.747,
+      "nombreCamara": "El Principal LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "50+747",
+        "nombreCamara": "EL PRINCIPAL LPG",
+        "search": "CCM LPG 50+747 EL PRINCIPAL LPG"
+      }
+    },
+    {
+      "id": "cam-070",
+      "item": 70,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "50+747",
+      "pkKm": 50.747,
+      "nombreCamara": "El Principal PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "50+747",
+        "nombreCamara": "EL PRINCIPAL PL",
+        "search": "CCM LPG 50+747 EL PRINCIPAL PL"
+      }
+    },
+    {
+      "id": "cam-071",
+      "item": 71,
+      "oleoducto": "CCM",
+      "linea": "LPG-PL",
+      "pk": "32+800",
+      "pkKm": 32.8,
+      "nombreCamara": "Lo Moscosos PL-LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG-PL",
+        "pk": "32+800",
+        "nombreCamara": "LO MOSCOSOS PL-LPG",
+        "search": "CCM LPG-PL 32+800 LO MOSCOSOS PL-LPG"
+      }
+    },
+    {
+      "id": "cam-072",
+      "item": 72,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "34+180",
+      "pkKm": 34.18,
+      "nombreCamara": "El Durazno LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "34+180",
+        "nombreCamara": "EL DURAZNO LPG",
+        "search": "CCM LPG 34+180 EL DURAZNO LPG"
+      }
+    },
+    {
+      "id": "cam-073",
+      "item": 73,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "34+180",
+      "pkKm": 34.18,
+      "nombreCamara": "El Durazno PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "34+180",
+        "nombreCamara": "EL DURAZNO PL",
+        "search": "CCM PL 34+180 EL DURAZNO PL"
+      }
+    },
+    {
+      "id": "cam-074",
+      "item": 74,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "34+560",
+      "pkKm": 34.56,
+      "nombreCamara": "Lo Orozco PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "34+560",
+        "nombreCamara": "LO OROZCO PL",
+        "search": "CCM PL 34+560 LO OROZCO PL"
+      }
+    },
+    {
+      "id": "cam-075",
+      "item": 75,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "34+560",
+      "pkKm": 34.56,
+      "nombreCamara": "Lo Orozco LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "34+560",
+        "nombreCamara": "LO OROZCO LPG",
+        "search": "CCM LPG 34+560 LO OROZCO LPG"
+      }
+    },
+    {
+      "id": "cam-076",
+      "item": 76,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "111+100",
+      "pkKm": 111.1,
+      "nombreCamara": "Carena LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "111+100",
+        "nombreCamara": "CARENA LPG",
+        "search": "CCM LPG 111+100 CARENA LPG"
+      }
+    },
+    {
+      "id": "cam-077",
+      "item": 77,
+      "oleoducto": "CCM",
+      "linea": "",
+      "pk": "111+370",
+      "pkKm": 111.37,
+      "nombreCamara": "Carena PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "",
+        "pk": "111+370",
+        "nombreCamara": "CARENA PL",
+        "search": "CCM 111+370 CARENA PL"
+      }
+    },
+    {
+      "id": "cam-078",
+      "item": 78,
+      "oleoducto": "CCM",
+      "linea": "LPG",
+      "pk": "42+380",
+      "pkKm": 42.38,
+      "nombreCamara": "Pozo Azul LPG",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "LPG",
+        "pk": "42+380",
+        "nombreCamara": "POZO AZUL LPG",
+        "search": "CCM LPG 42+380 POZO AZUL LPG"
+      }
+    },
+    {
+      "id": "cam-079",
+      "item": 79,
+      "oleoducto": "CCM",
+      "linea": "PL",
+      "pk": "42+380",
+      "pkKm": 42.38,
+      "nombreCamara": "Pozo Azul PL",
+      "keys": {
+        "oleoducto": "CCM",
+        "linea": "PL",
+        "pk": "42+380",
+        "nombreCamara": "POZO AZUL PL",
+        "search": "CCM PL 42+380 POZO AZUL PL"
+      }
+    },
+    {
+      "id": "cam-080",
+      "item": 80,
+      "oleoducto": "MAAMB",
+      "linea": "PL",
+      "pk": "5+080",
+      "pkKm": 5.08,
+      "nombreCamara": "Zanjon De La Aguada Sur",
+      "keys": {
+        "oleoducto": "MAAMB",
+        "linea": "PL",
+        "pk": "5+080",
+        "nombreCamara": "ZANJON DE LA AGUADA SUR",
+        "search": "MAAMB PL 5+080 ZANJON DE LA AGUADA SUR"
+      }
+    },
+    {
+      "id": "cam-081",
+      "item": 81,
+      "oleoducto": "MAAMB",
+      "linea": "PL",
+      "pk": "5+800",
+      "pkKm": 5.8,
+      "nombreCamara": "Pajaritos Norte",
+      "keys": {
+        "oleoducto": "MAAMB",
+        "linea": "PL",
+        "pk": "5+800",
+        "nombreCamara": "PAJARITOS NORTE",
+        "search": "MAAMB PL 5+800 PAJARITOS NORTE"
+      }
+    },
+    {
+      "id": "cam-082",
+      "item": 82,
+      "oleoducto": "MAAMB",
+      "linea": "PL",
+      "pk": "15+420",
+      "pkKm": 15.42,
+      "nombreCamara": "Mapocho sur",
+      "keys": {
+        "oleoducto": "MAAMB",
+        "linea": "PL",
+        "pk": "15+420",
+        "nombreCamara": "MAPOCHO SUR",
+        "search": "MAAMB PL 15+420 MAPOCHO SUR"
+      }
+    },
+    {
+      "id": "cam-083",
+      "item": 83,
+      "oleoducto": "MAAMB",
+      "linea": "PL",
+      "pk": "15+600",
+      "pkKm": 15.6,
+      "nombreCamara": "Mapocho Norte",
+      "keys": {
+        "oleoducto": "MAAMB",
+        "linea": "PL",
+        "pk": "15+600",
+        "nombreCamara": "MAPOCHO NORTE",
+        "search": "MAAMB PL 15+600 MAPOCHO NORTE"
+      }
+    },
+    {
+      "id": "cam-084",
+      "item": 84,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "00+000",
+      "pkKm": 0,
+      "nombreCamara": "Antivero Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "00+000",
+        "nombreCamara": "ANTIVERO SUR",
+        "search": "SFDOM PL 00+000 ANTIVERO SUR"
+      }
+    },
+    {
+      "id": "cam-085",
+      "item": 85,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "103+170",
+      "pkKm": 103.17,
+      "nombreCamara": "Maipo Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "103+170",
+        "nombreCamara": "MAIPO SUR",
+        "search": "SFDOM PL 103+170 MAIPO SUR"
+      }
+    },
+    {
+      "id": "cam-086",
+      "item": 86,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "110+000",
+      "pkKm": 110,
+      "nombreCamara": "Lonquen Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "110+000",
+        "nombreCamara": "LONQUEN SUR",
+        "search": "SFDOM PL 110+000 LONQUEN SUR"
+      }
+    },
+    {
+      "id": "cam-087",
+      "item": 87,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "75+000",
+      "pkKm": 75,
+      "nombreCamara": "San Fco. De Mostazal",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "75+000",
+        "nombreCamara": "SAN FCO. DE MOSTAZAL",
+        "search": "SFDOM PL 75+000 SAN FCO. DE MOSTAZAL"
+      }
+    },
+    {
+      "id": "cam-088",
+      "item": 88,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "64+900",
+      "pkKm": 64.9,
+      "nombreCamara": "Cuarta Hijuelas",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "64+900",
+        "nombreCamara": "CUARTA HIJUELAS",
+        "search": "SFDOM PL 64+900 CUARTA HIJUELAS"
+      }
+    },
+    {
+      "id": "cam-089",
+      "item": 89,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "122+300",
+      "pkKm": 122.3,
+      "nombreCamara": "Lonquen Norte",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "122+300",
+        "nombreCamara": "LONQUEN NORTE",
+        "search": "SFDOM PL 122+300 LONQUEN NORTE"
+      }
+    },
+    {
+      "id": "cam-090",
+      "item": 90,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "52+300",
+      "pkKm": 52.3,
+      "nombreCamara": "Cachapoal Norte",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "52+300",
+        "nombreCamara": "CACHAPOAL NORTE",
+        "search": "SFDOM PL 52+300 CACHAPOAL NORTE"
+      }
+    },
+    {
+      "id": "cam-091",
+      "item": 91,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "92+600",
+      "pkKm": 92.6,
+      "nombreCamara": "Champa",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "92+600",
+        "nombreCamara": "CHAMPA",
+        "search": "SFDOM PL 92+600 CHAMPA"
+      }
+    },
+    {
+      "id": "cam-092",
+      "item": 92,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "85+040",
+      "pkKm": 85.04,
+      "nombreCamara": "Aguila Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "85+040",
+        "nombreCamara": "AGUILA SUR",
+        "search": "SFDOM PL 85+040 AGUILA SUR"
+      }
+    },
+    {
+      "id": "cam-093",
+      "item": 93,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "49+350",
+      "pkKm": 49.35,
+      "nombreCamara": "Cachapoal Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "49+350",
+        "nombreCamara": "CACHAPOAL SUR",
+        "search": "SFDOM PL 49+350 CACHAPOAL SUR"
+      }
+    },
+    {
+      "id": "cam-094",
+      "item": 94,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "38+000",
+      "pkKm": 38,
+      "nombreCamara": "California",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "38+000",
+        "nombreCamara": "CALIFORNIA",
+        "search": "SFDOM PL 38+000 CALIFORNIA"
+      }
+    },
+    {
+      "id": "cam-095",
+      "item": 95,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "25+360",
+      "pkKm": 25.36,
+      "nombreCamara": "Rio Claro Norte",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "25+360",
+        "nombreCamara": "RIO CLARO NORTE",
+        "search": "SFDOM PL 25+360 RIO CLARO NORTE"
+      }
+    },
+    {
+      "id": "cam-096",
+      "item": 96,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "24+530",
+      "pkKm": 24.53,
+      "nombreCamara": "Rio Claro Sur",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "24+530",
+        "nombreCamara": "RIO CLARO SUR",
+        "search": "SFDOM PL 24+530 RIO CLARO SUR"
+      }
+    },
+    {
+      "id": "cam-097",
+      "item": 97,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "16+800",
+      "pkKm": 16.8,
+      "nombreCamara": "Pelequen",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "16+800",
+        "nombreCamara": "PELEQUEN",
+        "search": "SFDOM PL 16+800 PELEQUEN"
+      }
+    },
+    {
+      "id": "cam-098",
+      "item": 98,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "1+400",
+      "pkKm": 1.4,
+      "nombreCamara": "Antivero Norte",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "1+400",
+        "nombreCamara": "ANTIVERO NORTE",
+        "search": "SFDOM PL 1+400 ANTIVERO NORTE"
+      }
+    },
+    {
+      "id": "cam-099",
+      "item": 99,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "00+050",
+      "pkKm": 0.05,
+      "nombreCamara": "Derivacion COMAP",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "00+050",
+        "nombreCamara": "DERIVACION COMAP",
+        "search": "SFDOM PL 00+050 DERIVACION COMAP"
+      }
+    },
+    {
+      "id": "cam-100",
+      "item": 100,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "134+100",
+      "pkKm": 134.1,
+      "nombreCamara": "Interior COPEC Maipú",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "134+100",
+        "nombreCamara": "INTERIOR COPEC MAIPU",
+        "search": "SFDOM PL 134+100 INTERIOR COPEC MAIPU"
+      }
+    },
+    {
+      "id": "cam-101",
+      "item": 101,
+      "oleoducto": "SFDOM",
+      "linea": "PL",
+      "pk": "105+160",
+      "pkKm": 105.16,
+      "nombreCamara": "Maipo Norte",
+      "keys": {
+        "oleoducto": "SFDOM",
+        "linea": "PL",
+        "pk": "105+160",
+        "nombreCamara": "MAIPO NORTE",
+        "search": "SFDOM PL 105+160 MAIPO NORTE"
+      }
+    }
+  ],
+  "indexes": {
+    "byOleoducto": {
+      "QCC": [
+        "cam-001",
+        "cam-002",
+        "cam-003",
+        "cam-004",
+        "cam-005",
+        "cam-006",
+        "cam-007",
+        "cam-008",
+        "cam-009",
+        "cam-010",
+        "cam-011",
+        "cam-012",
+        "cam-013",
+        "cam-014",
+        "cam-015",
+        "cam-016"
+      ],
+      "CCM": [
+        "cam-017",
+        "cam-018",
+        "cam-019",
+        "cam-020",
+        "cam-021",
+        "cam-022",
+        "cam-023",
+        "cam-024",
+        "cam-025",
+        "cam-026",
+        "cam-027",
+        "cam-028",
+        "cam-029",
+        "cam-030",
+        "cam-031",
+        "cam-032",
+        "cam-033",
+        "cam-034",
+        "cam-035",
+        "cam-036",
+        "cam-037",
+        "cam-038",
+        "cam-039",
+        "cam-040",
+        "cam-041",
+        "cam-042",
+        "cam-043",
+        "cam-044",
+        "cam-045",
+        "cam-046",
+        "cam-047",
+        "cam-048",
+        "cam-049",
+        "cam-050",
+        "cam-051",
+        "cam-052",
+        "cam-053",
+        "cam-054",
+        "cam-055",
+        "cam-056",
+        "cam-057",
+        "cam-058",
+        "cam-059",
+        "cam-060",
+        "cam-061",
+        "cam-062",
+        "cam-063",
+        "cam-064",
+        "cam-065",
+        "cam-066",
+        "cam-067",
+        "cam-068",
+        "cam-069",
+        "cam-070",
+        "cam-071",
+        "cam-072",
+        "cam-073",
+        "cam-074",
+        "cam-075",
+        "cam-076",
+        "cam-077",
+        "cam-078",
+        "cam-079"
+      ],
+      "MAAMB": [
+        "cam-080",
+        "cam-081",
+        "cam-082",
+        "cam-083"
+      ],
+      "SFDOM": [
+        "cam-084",
+        "cam-085",
+        "cam-086",
+        "cam-087",
+        "cam-088",
+        "cam-089",
+        "cam-090",
+        "cam-091",
+        "cam-092",
+        "cam-093",
+        "cam-094",
+        "cam-095",
+        "cam-096",
+        "cam-097",
+        "cam-098",
+        "cam-099",
+        "cam-100",
+        "cam-101"
+      ]
+    },
+    "byLinea": {
+      "LPG": [
+        "cam-001",
+        "cam-003",
+        "cam-005",
+        "cam-007",
+        "cam-009",
+        "cam-011",
+        "cam-013",
+        "cam-014",
+        "cam-017",
+        "cam-019",
+        "cam-022",
+        "cam-023",
+        "cam-025",
+        "cam-026",
+        "cam-028",
+        "cam-030",
+        "cam-032",
+        "cam-034",
+        "cam-036",
+        "cam-038",
+        "cam-042",
+        "cam-043",
+        "cam-045",
+        "cam-048",
+        "cam-049",
+        "cam-051",
+        "cam-052",
+        "cam-054",
+        "cam-056",
+        "cam-058",
+        "cam-060",
+        "cam-061",
+        "cam-064",
+        "cam-066",
+        "cam-067",
+        "cam-069",
+        "cam-070",
+        "cam-072",
+        "cam-075",
+        "cam-076",
+        "cam-078"
+      ],
+      "PL": [
+        "cam-002",
+        "cam-004",
+        "cam-006",
+        "cam-008",
+        "cam-010",
+        "cam-012",
+        "cam-015",
+        "cam-016",
+        "cam-018",
+        "cam-020",
+        "cam-021",
+        "cam-024",
+        "cam-027",
+        "cam-029",
+        "cam-031",
+        "cam-033",
+        "cam-035",
+        "cam-037",
+        "cam-039",
+        "cam-041",
+        "cam-044",
+        "cam-046",
+        "cam-047",
+        "cam-050",
+        "cam-053",
+        "cam-055",
+        "cam-057",
+        "cam-059",
+        "cam-062",
+        "cam-063",
+        "cam-065",
+        "cam-068",
+        "cam-073",
+        "cam-074",
+        "cam-079",
+        "cam-080",
+        "cam-081",
+        "cam-082",
+        "cam-083",
+        "cam-084",
+        "cam-085",
+        "cam-086",
+        "cam-087",
+        "cam-088",
+        "cam-089",
+        "cam-090",
+        "cam-091",
+        "cam-092",
+        "cam-093",
+        "cam-094",
+        "cam-095",
+        "cam-096",
+        "cam-097",
+        "cam-098",
+        "cam-099",
+        "cam-100",
+        "cam-101"
+      ],
+      "LPG-PL": [
+        "cam-040",
+        "cam-071"
+      ],
+      "__VACIO__": [
+        "cam-077"
+      ]
+    },
+    "byPk": {
+      "2+525": [
+        "cam-001"
+      ],
+      "6+900": [
+        "cam-002"
+      ],
+      "7+570": [
+        "cam-003"
+      ],
+      "7+650": [
+        "cam-004"
+      ],
+      "8+300": [
+        "cam-005"
+      ],
+      "10+750": [
+        "cam-006"
+      ],
+      "11+450": [
+        "cam-007"
+      ],
+      "11+180": [
+        "cam-008"
+      ],
+      "11+900": [
+        "cam-009"
+      ],
+      "14+960": [
+        "cam-010"
+      ],
+      "15+000": [
+        "cam-011"
+      ],
+      "17+860": [
+        "cam-012"
+      ],
+      "18+600": [
+        "cam-013",
+        "cam-014"
+      ],
+      "19+060": [
+        "cam-015"
+      ],
+      "19+800": [
+        "cam-016"
+      ],
+      "40+200": [
+        "cam-017",
+        "cam-018"
+      ],
+      "40+580": [
+        "cam-019",
+        "cam-020"
+      ],
+      "69+100": [
+        "cam-021"
+      ],
+      "71+270": [
+        "cam-022",
+        "cam-023"
+      ],
+      "72+470": [
+        "cam-024",
+        "cam-025"
+      ],
+      "74+740": [
+        "cam-026",
+        "cam-027"
+      ],
+      "81+390": [
+        "cam-028",
+        "cam-029"
+      ],
+      "93+570": [
+        "cam-030",
+        "cam-031"
+      ],
+      "103+800": [
+        "cam-032",
+        "cam-033"
+      ],
+      "106+438": [
+        "cam-034",
+        "cam-035"
+      ],
+      "125+700": [
+        "cam-036",
+        "cam-037",
+        "cam-058",
+        "cam-059"
+      ],
+      "129+300": [
+        "cam-038",
+        "cam-039"
+      ],
+      "134+100": [
+        "cam-040",
+        "cam-100"
+      ],
+      "22+070": [
+        "cam-041",
+        "cam-042"
+      ],
+      "94+060": [
+        "cam-043",
+        "cam-044"
+      ],
+      "112+060": [
+        "cam-045",
+        "cam-046"
+      ],
+      "28+360": [
+        "cam-047",
+        "cam-048"
+      ],
+      "7+620": [
+        "cam-049",
+        "cam-065"
+      ],
+      "7+710": [
+        "cam-050",
+        "cam-066"
+      ],
+      "9+525": [
+        "cam-051"
+      ],
+      "10+480": [
+        "cam-052",
+        "cam-053",
+        "cam-060"
+      ],
+      "113+800": [
+        "cam-054",
+        "cam-055"
+      ],
+      "123+360": [
+        "cam-056",
+        "cam-057"
+      ],
+      "4+100": [
+        "cam-061",
+        "cam-062"
+      ],
+      "4+101": [
+        "cam-063"
+      ],
+      "97+800": [
+        "cam-064"
+      ],
+      "60+590": [
+        "cam-067",
+        "cam-068"
+      ],
+      "50+747": [
+        "cam-069",
+        "cam-070"
+      ],
+      "32+800": [
+        "cam-071"
+      ],
+      "34+180": [
+        "cam-072",
+        "cam-073"
+      ],
+      "34+560": [
+        "cam-074",
+        "cam-075"
+      ],
+      "111+100": [
+        "cam-076"
+      ],
+      "111+370": [
+        "cam-077"
+      ],
+      "42+380": [
+        "cam-078",
+        "cam-079"
+      ],
+      "5+080": [
+        "cam-080"
+      ],
+      "5+800": [
+        "cam-081"
+      ],
+      "15+420": [
+        "cam-082"
+      ],
+      "15+600": [
+        "cam-083"
+      ],
+      "00+000": [
+        "cam-084"
+      ],
+      "103+170": [
+        "cam-085"
+      ],
+      "110+000": [
+        "cam-086"
+      ],
+      "75+000": [
+        "cam-087"
+      ],
+      "64+900": [
+        "cam-088"
+      ],
+      "122+300": [
+        "cam-089"
+      ],
+      "52+300": [
+        "cam-090"
+      ],
+      "92+600": [
+        "cam-091"
+      ],
+      "85+040": [
+        "cam-092"
+      ],
+      "49+350": [
+        "cam-093"
+      ],
+      "38+000": [
+        "cam-094"
+      ],
+      "25+360": [
+        "cam-095"
+      ],
+      "24+530": [
+        "cam-096"
+      ],
+      "16+800": [
+        "cam-097"
+      ],
+      "1+400": [
+        "cam-098"
+      ],
+      "00+050": [
+        "cam-099"
+      ],
+      "105+160": [
+        "cam-101"
+      ]
+    },
+    "byOleoductoLinea": {
+      "QCC::LPG": [
+        "cam-001",
+        "cam-003",
+        "cam-005",
+        "cam-007",
+        "cam-009",
+        "cam-011",
+        "cam-013",
+        "cam-014"
+      ],
+      "QCC::PL": [
+        "cam-002",
+        "cam-004",
+        "cam-006",
+        "cam-008",
+        "cam-010",
+        "cam-012",
+        "cam-015",
+        "cam-016"
+      ],
+      "CCM::LPG": [
+        "cam-017",
+        "cam-019",
+        "cam-022",
+        "cam-023",
+        "cam-025",
+        "cam-026",
+        "cam-028",
+        "cam-030",
+        "cam-032",
+        "cam-034",
+        "cam-036",
+        "cam-038",
+        "cam-042",
+        "cam-043",
+        "cam-045",
+        "cam-048",
+        "cam-049",
+        "cam-051",
+        "cam-052",
+        "cam-054",
+        "cam-056",
+        "cam-058",
+        "cam-060",
+        "cam-061",
+        "cam-064",
+        "cam-066",
+        "cam-067",
+        "cam-069",
+        "cam-070",
+        "cam-072",
+        "cam-075",
+        "cam-076",
+        "cam-078"
+      ],
+      "CCM::PL": [
+        "cam-018",
+        "cam-020",
+        "cam-021",
+        "cam-024",
+        "cam-027",
+        "cam-029",
+        "cam-031",
+        "cam-033",
+        "cam-035",
+        "cam-037",
+        "cam-039",
+        "cam-041",
+        "cam-044",
+        "cam-046",
+        "cam-047",
+        "cam-050",
+        "cam-053",
+        "cam-055",
+        "cam-057",
+        "cam-059",
+        "cam-062",
+        "cam-063",
+        "cam-065",
+        "cam-068",
+        "cam-073",
+        "cam-074",
+        "cam-079"
+      ],
+      "CCM::LPG-PL": [
+        "cam-040",
+        "cam-071"
+      ],
+      "CCM::": [
+        "cam-077"
+      ],
+      "MAAMB::PL": [
+        "cam-080",
+        "cam-081",
+        "cam-082",
+        "cam-083"
+      ],
+      "SFDOM::PL": [
+        "cam-084",
+        "cam-085",
+        "cam-086",
+        "cam-087",
+        "cam-088",
+        "cam-089",
+        "cam-090",
+        "cam-091",
+        "cam-092",
+        "cam-093",
+        "cam-094",
+        "cam-095",
+        "cam-096",
+        "cam-097",
+        "cam-098",
+        "cam-099",
+        "cam-100",
+        "cam-101"
+      ]
+    }
+  }
+}

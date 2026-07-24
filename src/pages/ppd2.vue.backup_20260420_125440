@@ -1,0 +1,1716 @@
+<template>
+  <DashboardLayout>
+    <v-container
+      fluid
+      class="pa-4 ppd2-page"
+    >
+      <v-card
+        variant="outlined"
+        class="mb-4"
+      >
+        <v-card-text>
+          <v-row
+            dense
+            class="align-end"
+          >
+            <v-col
+              cols="12"
+              md="3"
+            >
+              <v-text-field
+                v-model="fechaSeleccionada"
+                label="Fecha"
+                type="date"
+                density="compact"
+                variant="outlined"
+                hide-details
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="3"
+            >
+              <v-select
+                v-model="clienteSeleccionado"
+                :items="clientes"
+                item-title="name_empresa"
+                item-value="id_empresa"
+                label="Cliente"
+                density="compact"
+                variant="outlined"
+                clearable
+                hide-details
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-select
+                v-model="proyectoSeleccionado"
+                :items="proyectos"
+                item-title="nombre_proyecto"
+                item-value="id_proyecto"
+                label="Proyecto"
+                density="compact"
+                variant="outlined"
+                clearable
+                hide-details
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="2"
+              class="d-flex"
+            >
+              <v-btn
+                block
+                color="primary"
+                :loading="cargando"
+                @click="cargarTareas"
+              >
+                Cargar
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
+
+      <v-alert
+        type="info"
+        variant="tonal"
+        class="mb-4"
+      >
+        {{ resumenFecha }} | API: {{ totalBase }}
+      </v-alert>
+
+      <v-alert
+        v-if="errorCarga"
+        type="error"
+        variant="tonal"
+        class="mb-4"
+      >
+        {{ errorCarga }}
+      </v-alert>
+
+      <div class="d-flex justify-end mb-3">
+        <v-btn
+          color="green"
+          variant="flat"
+          :disabled="!tareasBase.length"
+          @click="openCreateTaskModal"
+        >
+          <v-icon
+            icon="mdi-plus"
+            size="16"
+            class="mr-1"
+          />
+          Crear tarea
+        </v-btn>
+      </div>
+
+      <v-row
+        v-if="!cargando && tareasTarjeta.length"
+        dense
+      >
+        <v-col
+          v-for="t in tareasTarjeta"
+          :key="t.idTarea"
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="h-100"
+            variant="outlined"
+          >
+            <v-card-title class="d-flex align-center justify-space-between">
+              <span class="text-subtitle-1 font-weight-bold">
+                {{ t.codigoEdt || 'Sin EDT' }} - {{ t.nombreTarea }}
+              </span>
+              <v-btn
+                icon
+                size="x-small"
+                color="red"
+                variant="text"
+                @click="removeTaskCard(t.idTarea)"
+              >
+                <v-icon icon="mdi-delete-outline" />
+              </v-btn>
+            </v-card-title>
+            <v-card-text>
+              <div class="text-body-2 text-medium-emphasis mb-2">
+                {{ getTaskSubtitle(t) }}
+              </div>
+
+              <div class="ppd-editor">
+                <v-row
+                  v-if="isUiSegmentOpen(t, 'segmento1')"
+                  dense
+                  class="mt-1"
+                >
+                  <v-col
+                    cols="12"
+                    md="12"
+                  >
+                    <v-select
+                      v-model="getPpdDraft(t.idTarea).patrullas"
+                      :items="getPatrullasOptions(t)"
+                      label="Patrullas"
+                      multiple
+                      chips
+                      closable-chips
+                      density="compact"
+                      variant="outlined"
+                      hide-details
+                    />
+                  </v-col>
+                </v-row>
+
+                <v-card
+                  v-if="isSegmentVisible(t, 'actividad') && isUiSegmentOpen(t, 'segmento2')"
+                  variant="outlined"
+                  class="mt-2 pa-2"
+                >
+                  <v-row dense>
+                    <v-col cols="12">
+                      <v-text-field
+                        :model-value="getActividadNombre(t)"
+                        label="Actividad"
+                        density="compact"
+                        variant="outlined"
+                        hide-details
+                        readonly
+                      />
+                    </v-col>
+                    <template v-if="actividadRequiresPk(getActividadNombre(t))">
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-select
+                          v-model="getPpdDraft(t.idTarea).actividad.pkInicio"
+                          :items="getPkOptions(t)"
+                          label="PK INICIO QCC"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-select
+                          v-model="getPpdDraft(t.idTarea).actividad.pkFinal"
+                          :items="getPkOptions(t)"
+                          label="PK FINAL QCC"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                    </template>
+                    <v-col
+                      cols="12"
+                      md="6"
+                    >
+                      <v-text-field
+                        v-model="getPpdDraft(t.idTarea).actividad.totalHorasActividad"
+                        type="number"
+                        label="TOTAL DE HORAS REALIZADAS POR ACTIVIDAD"
+                        density="compact"
+                        variant="outlined"
+                        hide-details
+                      />
+                    </v-col>
+                    <v-col
+                      cols="12"
+                      md="6"
+                    >
+                      <v-text-field
+                        v-model="getPpdDraft(t.idTarea).actividad.horasTraslado"
+                        type="number"
+                        label="HORAS DE TRASLADOS"
+                        hint="Considerar 2 hrs de traslado diario."
+                        persistent-hint
+                        density="compact"
+                        variant="outlined"
+                        hide-details="auto"
+                      />
+                    </v-col>
+
+                    <template v-if="isActividad(getActividadNombre(t), 'SEÑALETICA')">
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.totalHitosInstalados" type="number" label="TOTAL DE HITOS INSTALADOS" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.totalHitosPintados" type="number" label="TOTAL DE HITOS PINTADOS" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.totalLogotiposCambiados" type="number" label="TOTAL DE LOGOTIPOS CAMBIADOS" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.totalPkPintados" type="number" label="TOTAL DE PK PINTADOS" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.reposicionPlancheta" type="number" label="REPOSICIÓN DE PLANCHETA" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12" md="6">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.reposicionPilar" type="number" label="REPOSICIÓN DE PILAR" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.instalacionSenaleticaNueva" type="number" label="INSTALACIÓN DE SEÑALETICA NUEVA" hint="(Pilar, plancheta y logotipos)" persistent-hint density="compact" variant="outlined" hide-details="auto" />
+                      </v-col>
+                    </template>
+
+                    <template v-if="isActividad(getActividadNombre(t), 'APOYO RECORRIDO INSPECCIÓN')">
+                      <v-col cols="12">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.kmRecorridosInspeccion" type="number" label="KM RECORRIDOS EN INSPECCIÓN" hint="Ingresar en metros." persistent-hint density="compact" variant="outlined" hide-details="auto" />
+                      </v-col>
+                    </template>
+
+                    <template v-if="isActividad(getActividadNombre(t), 'CALICATAS')">
+                      <v-col cols="12">
+                        <v-text-field v-model="getPpdDraft(t.idTarea).actividad.totalCalicatasRealizadas" type="number" label="TOTAL N° DE CALICATAS REALIZADAS" density="compact" variant="outlined" hide-details />
+                      </v-col>
+                    </template>
+
+                    <v-col
+                      v-if="actividadShowsObservaciones(getActividadNombre(t))"
+                      cols="12"
+                    >
+                      <v-textarea
+                        v-model="getPpdDraft(t.idTarea).actividad.observaciones"
+                        label="OBSERVACIONES"
+                        auto-grow
+                        rows="2"
+                        density="compact"
+                        variant="outlined"
+                        hide-details
+                      />
+                    </v-col>
+                  </v-row>
+                </v-card>
+
+                <v-card
+                  v-if="isSegmentVisible(t, 'servidumbre') && isUiSegmentOpen(t, 'segmento2')"
+                  variant="outlined"
+                  class="mt-2 pa-2"
+                >
+                  <div
+                    v-for="(r, rIdx) in getPrimeraRegistros(t.idTarea).slice(0, 1)"
+                    :key="`pm-${t.idTarea}-0`"
+                    class="ppd-registro"
+                  >
+                    <v-row dense>
+                      <v-col cols="12">
+                        <div class="text-caption mb-1 ppd-map-label">
+                          Ubicación automática (mapa actual)
+                        </div>
+                        <div
+                          v-if="getGeoState(t.idTarea).loading"
+                          class="ppd-map-placeholder"
+                        >
+                          <v-progress-circular
+                            indeterminate
+                            size="16"
+                            width="2"
+                            class="mr-2"
+                          />
+                          Obteniendo ubicación actual...
+                        </div>
+                        <div
+                          v-else-if="getGeoState(t.idTarea).lat !== null && getGeoState(t.idTarea).lon !== null"
+                          class="ppd-map-embed-wrap"
+                        >
+                          <iframe
+                            :src="getGeoMapUrl(t.idTarea)"
+                            class="ppd-map-embed"
+                            loading="lazy"
+                          />
+                          <div class="ppd-map-meta mt-1 text-medium-emphasis">
+                            Lat: {{ Number(getGeoState(t.idTarea).lat).toFixed(6) }} |
+                            Lon: {{ Number(getGeoState(t.idTarea).lon).toFixed(6) }} |
+                            Precisión: ±{{ Math.round(getGeoState(t.idTarea).accuracy || 0) }} m
+                          </div>
+                          <div class="mt-2">
+                            <v-btn
+                              size="x-small"
+                              color="primary"
+                              variant="tonal"
+                              @click="captureCurrentLocation(t.idTarea)"
+                            >
+                              Actualizar posición
+                            </v-btn>
+                          </div>
+                        </div>
+                        <div
+                          v-else
+                          class="ppd-map-placeholder"
+                        >
+                          <v-icon
+                            icon="mdi-map-marker-alert-outline"
+                            size="16"
+                            class="mr-1"
+                          />
+                          {{ getGeoState(t.idTarea).error || 'No se pudo obtener ubicación.' }}
+                          <v-btn
+                            size="x-small"
+                            color="primary"
+                            variant="tonal"
+                            class="ml-2"
+                            @click="captureCurrentLocation(t.idTarea)"
+                          >
+                            Reintentar
+                          </v-btn>
+                        </div>
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-text-field
+                          v-model="r.horasTraslado"
+                          type="number"
+                          label="Horas de Traslado"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-select
+                          v-model="r.pkInicio"
+                          :items="getPkOptions(t)"
+                          label="PK Inicio"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-select
+                          v-model="r.pkFinal"
+                          :items="getPkOptions(t)"
+                          label="PK Final"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-text-field
+                          v-model="r.totalHorasActividad"
+                          type="number"
+                          label="Total horas realizadas por actividad"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-text-field
+                          v-model="r.pkAvanceDiario"
+                          label="PK de Avance diario"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-card>
+
+                <v-card
+                  v-if="isSegmentVisible(t, 'camaras') && isUiSegmentOpen(t, 'segmento2')"
+                  variant="outlined"
+                  class="mt-2 pa-2"
+                >
+                  <div
+                    v-for="(r, rIdx) in getCamaraRegistros(t.idTarea)"
+                    :key="`cm-${t.idTarea}-${rIdx}`"
+                    class="ppd-registro"
+                  >
+                    <v-row dense>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-text-field
+                          v-model="r.horasTraslado"
+                          type="number"
+                          label="Horas de Traslado"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-select
+                          v-model="r.pkInicio"
+                          :items="getPkOptions(t)"
+                          label="PK Inicio"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-select
+                          v-model="r.pkFinal"
+                          :items="getPkOptions(t)"
+                          label="PK Final"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-text-field
+                          v-model="r.totalHorasActividad"
+                          type="number"
+                          label="Total horas realizadas por actividad"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                      >
+                        <v-text-field
+                          v-model="r.camarasAvanceDiario"
+                          label="Cámaras de Avance diario"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="4"
+                      >
+                        <v-text-field
+                          :model-value="getCantidadCamarasRealizadas(r)"
+                          label="Cámaras Realizadas"
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                          readonly
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="8"
+                      >
+                        <v-select
+                          v-model="r.camarasSeleccionadas"
+                          :items="getCamaraOptions(t)"
+                          label="Seleccione Cámaras realizadas"
+                          multiple
+                          chips
+                          closable-chips
+                          density="compact"
+                          variant="outlined"
+                          hide-details
+                        />
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-card>
+
+                <div class="d-flex align-center justify-space-between mt-3">
+                  <div class="text-caption font-weight-bold">
+                    Definición de Actividades
+                  </div>
+                  <v-btn
+                    icon
+                    size="x-small"
+                    variant="text"
+                    @click="toggleUiSegment(t, 'segmentoDefActividades')"
+                  >
+                    <v-icon :icon="isUiSegmentOpen(t, 'segmentoDefActividades') ? 'mdi-chevron-down' : 'mdi-chevron-right'" />
+                  </v-btn>
+                </div>
+
+                <v-card
+                  v-if="isUiSegmentOpen(t, 'segmentoDefActividades')"
+                  variant="outlined"
+                  class="mt-2 pa-2"
+                >
+                  <div>
+                    <div
+                      v-for="(item, idx) in definicionActividades"
+                      :key="`def-act-${idx}`"
+                      class="mb-2"
+                    >
+                      <div class="text-caption font-weight-bold">
+                        {{ item.titulo }}
+                      </div>
+                      <div class="text-body-2">
+                        {{ item.descripcion }}
+                      </div>
+                    </div>
+                  </div>
+                </v-card>
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+
+      <v-card
+        v-else-if="!cargando"
+        variant="outlined"
+      >
+        <v-card-text class="text-medium-emphasis">
+          No hay tareas para la fecha seleccionada.
+        </v-card-text>
+      </v-card>
+
+      <v-dialog
+        v-model="showCreateTaskModal"
+        max-width="760"
+      >
+        <v-card>
+          <v-card-title class="text-subtitle-1 font-weight-bold">
+            Crear tarea
+          </v-card-title>
+          <v-card-text>
+            <v-row dense>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-select
+                  v-model="createTaskSelection.nivel1"
+                  :items="createTaskOptionsNivel1"
+                  item-title="title"
+                  item-value="value"
+                  label="Paso 1: EDT principal"
+                  density="compact"
+                  variant="outlined"
+                  hide-details
+                />
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-select
+                  v-model="createTaskSelection.nivel2"
+                  :items="createTaskOptionsNivel2"
+                  item-title="title"
+                  item-value="value"
+                  label="Paso 2: Partida / Actividad"
+                  density="compact"
+                  variant="outlined"
+                  hide-details
+                  :disabled="!createTaskSelection.nivel1"
+                />
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-select
+                  v-model="createTaskSelection.nivel3"
+                  :items="createTaskOptionsNivel3"
+                  item-title="title"
+                  item-value="value"
+                  label="Paso 3: Tarea final"
+                  density="compact"
+                  variant="outlined"
+                  hide-details
+                  :disabled="!createTaskSelection.nivel2"
+                />
+              </v-col>
+            </v-row>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn
+              variant="text"
+              @click="closeCreateTaskModal"
+            >
+              Cancelar
+            </v-btn>
+            <v-btn
+              color="green"
+              variant="flat"
+              :disabled="!createTaskSelection.nivel3"
+              @click="confirmCreateTask"
+            >
+              Agregar
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-container>
+  </DashboardLayout>
+</template>
+
+<script setup>
+import { computed, onMounted, ref, watch } from 'vue'
+import DashboardLayout from '@/layouts/dashboard.vue'
+import apiAxios from '@/services/api'
+
+const fechaSeleccionada = ref('2026-01-01')
+const clienteSeleccionado = ref(null)
+const proyectoSeleccionado = ref(null)
+
+const clientes = ref([])
+const proyectos = ref([])
+const tareasBase = ref([])
+const cargando = ref(false)
+const errorCarga = ref('')
+const totalBase = ref(0)
+const DEFAULT_CLIENTE_NOMBRE = 'sonacol'
+const DEFAULT_PROYECTO_NOMBRE = 'mantencion de servidumbre'
+const actividadesOptions = [
+  'SEÑALETICA',
+  'CORTE Y RETIRO LINEA FUERA DE SERVICIO',
+  'CONTROL DE EROSIONES',
+  'APOYO SERVIDUMBRE REÑACA ALTO',
+  'LIMPIEZA CANAL INTERIOR Y EXTERIOR PLANTA CURACAVI',
+  'APOYO RECORRIDO INSPECCIÓN',
+  'MARCACION DE OLEODUCTO',
+  'CALICATAS',
+  'CAPACITACIONES O CURSOS',
+  'REUNIÓN',
+  'TRABAJOS ADICIONALES SERVIDUMBRE',
+  'RETIRO Y ENTREGA DE MATERIALES/HERRAMIENTAS',
+  'MANTENCIÓN DE CAMIONETAS',
+  'MANTENCIÓN DE ACCESOS SERVIDUMBRE',
+  'MANTENCION DE EMPALMES RECTIFICADORES Y REMOTO',
+  'MANTENCIÓN DE PORTON',
+  'APOYO CONEJEO',
+]
+const definicionActividades = [
+  {
+    titulo: '1.MANTENCIÓN DE SERVIDUMBRES',
+    descripcion: 'Limpieza de todo matorral, árbol y desmalezado de pasto que entorpezca el libre recorrido en todo su ancho de la servidumbre.',
+  },
+  {
+    titulo: '2.MANTENCIÓN DE ACCESOS A SERVIDUMBRES',
+    descripcion: 'Mantención de todos los accesos, portones, caminos de ingreso a servidumbre, cámaras y plantas de los oleoductos de Sonacol. (Detallar en observaciones).',
+  },
+  {
+    titulo: '3.MANTENCIÓN DE CÁMARAS SONACOL',
+    descripcion: 'Limpieza exterior, retiro de agua, pintura de tapa, mantención y pintura de cierres perimetrales, concertinas, plataformas de acceso, gabinetes de instrumentación, señalética, lubricación de tapas y recubrimiento exterior de muros.',
+  },
+  {
+    titulo: '4.SEÑALETICAS',
+    descripcion: 'Mantención e instalación de señaléticas como hitos, PK, letreros y logotipos: limpieza, pintura, codificación y desmalezado.',
+  },
+  {
+    titulo: '5.CORTE Y RETIRO LINEA F.S.',
+    descripcion: 'Todo trabajo relacionado al corte y retiro de líneas fuera de servicio de los oleoductos. (Detallar en observaciones).',
+  },
+  {
+    titulo: '6.CONTROL DE EROSIONES',
+    descripcion: 'Mejoramiento de erosiones que se producen por lluvias en servidumbres de Sonacol. (Detallar en observaciones).',
+  },
+  {
+    titulo: '7.MANTENCIÓN DE EMPALMES RECTIFICADORES Y REMOTO',
+    descripcion: 'Mantención, podas, limpieza y despeje de alimentaciones eléctricas de cámaras, rectificadores, drenajes y antenas de monitoreo remoto de forma trimestral. (Detallar en observaciones).',
+  },
+  {
+    titulo: '8.APOYO SERVIDUMBRE REÑACA ALTO',
+    descripcion: 'Toma de muestras de agua en Reñaca Alto PK 8+500 CCM (abril y octubre). (Detallar en observaciones).',
+  },
+  {
+    titulo: '9.LIMPIEZA CANAL INTERIOR Y EXTERIOR PLANTA CURACAVI',
+    descripcion: 'Limpieza con maquinaria de canal interior (junio y diciembre) y limpieza de canal exterior (diciembre).',
+  },
+  {
+    titulo: '10.APOYO RECORRIDO INSPECCION',
+    descripcion: 'Inspección de servidumbres oleoductos SF-M, CC-M, MAAMB y Q-CC. Se debe ingresar distancia recorrida en metros.',
+  },
+  {
+    titulo: '11.MARCACIÓN OLEODUCTO',
+    descripcion: 'Apoyo para marcación de oleoductos.',
+  },
+  {
+    titulo: '12.CALICATAS',
+    descripcion: 'Excavación de forma manual en terreno.',
+  },
+  {
+    titulo: '13.REUNION',
+    descripcion: 'Reuniones Sonacol y Terracon, presenciales u online.',
+  },
+  {
+    titulo: '14.CAPACITACIONES Y CURSOS',
+    descripcion: 'Capacitaciones de herramientas, procedimientos de trabajo y cursos mutual.',
+  },
+]
+const patrullasFijasOptions = ['P. NORTE', 'P. SUR', 'P. CENTRO', 'P. APOYO']
+const ppdStateByTask = ref({})
+const geoByTask = ref({})
+const removedTaskIds = ref(new Set())
+const forceVisibleTaskIds = ref(new Set())
+const showCreateTaskModal = ref(false)
+const manualCreatedTasks = ref([])
+const createTaskSelection = ref({
+  nivel1: null,
+  nivel2: null,
+  nivel3: null,
+})
+
+const normalizeText = (value) =>
+  String(value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+
+const toYmd = (value) => {
+  if (!value) return ''
+  if (typeof value === 'string') {
+    const clean0 = value.trim()
+    const clean = clean0.includes('T') ? clean0.split('T')[0] : clean0
+    if (/^\d{4}-\d{2}-\d{2}$/.test(clean)) return clean
+    const ddmmyyyy = clean.match(/^(\d{2})-(\d{2})-(\d{4})$/)
+    if (ddmmyyyy) return `${ddmmyyyy[3]}-${ddmmyyyy[2]}-${ddmmyyyy[1]}`
+  }
+  const d = new Date(value)
+  if (Number.isNaN(d.getTime())) return ''
+  const y = d.getUTCFullYear()
+  const m = String(d.getUTCMonth() + 1).padStart(2, '0')
+  const day = String(d.getUTCDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
+}
+
+const toNumberSafe = (value) => {
+  if (value === null || value === undefined || value === '') return 0
+  if (typeof value === 'number') return Number.isFinite(value) ? value : 0
+  const text = String(value).trim()
+  const normalized = text.includes(',')
+    ? text.replace(/\./g, '').replace(',', '.')
+    : text
+  const parsed = Number(normalized)
+  return Number.isFinite(parsed) ? parsed : 0
+}
+
+const getOptionByValue = (list, value) =>
+  (Array.isArray(list) ? list : []).find((item) => String(item?.value ?? '') === String(value ?? '')) || null
+
+const extractNameFromOptionTitle = (title) => {
+  const text = String(title || '').trim()
+  const dashIdx = text.indexOf(' - ')
+  return dashIdx >= 0 ? text.slice(dashIdx + 3).trim() : text
+}
+
+const extractCodeFromOptionTitle = (title) => {
+  const text = String(title || '').trim()
+  const dashIdx = text.indexOf(' - ')
+  const code = dashIdx >= 0 ? text.slice(0, dashIdx).trim() : ''
+  return code
+}
+
+const parseManualNivel3Title = (title) => {
+  const text = String(title || '').trim()
+  const m = text.match(/^(\d+(?:\.\d+)*)\s+(.+)$/)
+  if (!m) return { codigo: '', nombre: text }
+  return { codigo: String(m[1] || '').trim(), nombre: String(m[2] || '').trim() }
+}
+
+const normalizeDailyEntry = (entry) => {
+  if (!entry) return null
+  if (typeof entry !== 'object') return null
+  const fecha = toYmd(entry.fecha ?? entry.date ?? entry.dia ?? '')
+  if (!fecha) return null
+  return {
+    fecha,
+    value: entry.value ?? entry.plan ?? entry.planificado ?? entry.cantidad_plan ?? entry.plan_reasignado ?? 0,
+    real: entry.real ?? entry.cantidad_real ?? 0,
+  }
+}
+
+const parseJsonArray = (raw) => {
+  if (!raw) return []
+
+  if (Array.isArray(raw)) {
+    return raw
+      .map(normalizeDailyEntry)
+      .filter(Boolean)
+  }
+
+  if (typeof raw === 'string') {
+    try {
+      const parsed = JSON.parse(raw)
+      return parseJsonArray(parsed)
+    } catch {
+      return []
+    }
+  }
+
+  if (typeof raw === 'object') {
+    if (Array.isArray(raw.datos)) return parseJsonArray(raw.datos)
+    if (Array.isArray(raw.data)) return parseJsonArray(raw.data)
+
+    const out = []
+    for (const [k, v] of Object.entries(raw)) {
+      const fecha = toYmd(k)
+      if (!fecha) continue
+      if (typeof v === 'number' || typeof v === 'string') {
+        out.push({ fecha, value: v, real: 0 })
+      } else if (v && typeof v === 'object') {
+        out.push({
+          fecha,
+          value: v.value ?? v.plan ?? v.planificado ?? v.cantidad_plan ?? v.plan_reasignado ?? 0,
+          real: v.real ?? v.cantidad_real ?? 0,
+        })
+      }
+    }
+    return out
+  }
+
+  return []
+}
+
+const parseRecursos = (raw) => {
+  const recursos = Array.isArray(raw)
+    ? raw
+    : typeof raw === 'string'
+      ? (() => {
+          try {
+            const parsed = JSON.parse(raw)
+            return Array.isArray(parsed) ? parsed : []
+          } catch {
+            return []
+          }
+        })()
+      : []
+
+  return recursos
+    .map((r) => String(r?.nombre_excel || '').trim())
+    .filter(Boolean)
+}
+
+const parsePkRangeFromTitle = (titulo) => {
+  const text = String(titulo || '')
+  const match = text.match(/\((\d+(?:[.,]\d+)?)\s*-\s*(\d+(?:[.,]\d+)?)\s*km\)/i)
+  if (!match) return null
+  const start = Number(String(match[1]).replace(',', '.'))
+  const end = Number(String(match[2]).replace(',', '.'))
+  if (!Number.isFinite(start) || !Number.isFinite(end)) return null
+  return { start, end }
+}
+
+const formatPkOption = (v) => {
+  const n = Number(v)
+  if (!Number.isFinite(n)) return ''
+  const [intPart, decPart] = n.toFixed(3).split('.')
+  if (Number(decPart) === 0) return `${intPart}+000`
+  return `${intPart}+${decPart}`
+}
+
+const createPrimeraRegistro = () => ({
+  horasTraslado: 2,
+  pkInicio: null,
+  pkFinal: null,
+  totalHorasActividad: '',
+  pkAvanceDiario: '',
+})
+
+const createCamaraRegistro = () => ({
+  horasTraslado: 2,
+  pkInicio: null,
+  pkFinal: null,
+  totalHorasActividad: '',
+  camarasAvanceDiario: '',
+  camarasRealizadas: '',
+  camarasSeleccionadas: [],
+})
+
+const createActividadRegistro = () => ({
+  actividad: null,
+  pkInicio: null,
+  pkFinal: null,
+  totalHorasActividad: '',
+  horasTraslado: 2,
+  totalHitosInstalados: '',
+  totalHitosPintados: '',
+  totalLogotiposCambiados: '',
+  totalPkPintados: '',
+  reposicionPlancheta: '',
+  reposicionPilar: '',
+  instalacionSenaleticaNueva: '',
+  kmRecorridosInspeccion: '',
+  totalCalicatasRealizadas: '',
+  observaciones: '',
+})
+
+const actividadRuleByKey = {
+  'senaletica': { requiresPk: true, showsObservaciones: true },
+  'corte y retiro linea fuera de servicio': { requiresPk: false, showsObservaciones: true },
+  'control de erosiones': { requiresPk: true, showsObservaciones: true },
+  'apoyo servidumbre renaca alto': { requiresPk: false, showsObservaciones: true },
+  'limpieza canal interior y exterior planta curacavi': { requiresPk: false, showsObservaciones: true },
+  'apoyo recorrido inspeccion': { requiresPk: true, showsObservaciones: true },
+  'marcacion de oleoducto': { requiresPk: true, showsObservaciones: true },
+  'calicatas': { requiresPk: true, showsObservaciones: true },
+  'capacitaciones o cursos': { requiresPk: false, showsObservaciones: true },
+  'reunion': { requiresPk: false, showsObservaciones: true },
+  'trabajos adicionales servidumbre': { requiresPk: true, showsObservaciones: true },
+  'retiro y entrega de materiales/herramientas': { requiresPk: false, showsObservaciones: true },
+  'mantencion de camionetas': { requiresPk: false, showsObservaciones: true },
+  'mantencion de accesos servidumbre': { requiresPk: true, showsObservaciones: true },
+  'mantencion de empalmes rectificadores y remoto': { requiresPk: true, showsObservaciones: true },
+  'mantencion de porton': { requiresPk: true, showsObservaciones: false },
+  'apoyo conejeo': { requiresPk: true, showsObservaciones: true },
+}
+
+const getActividadRule = (actividad) => {
+  const key = normalizeText(actividad)
+  return actividadRuleByKey[key] || { requiresPk: false, showsObservaciones: true }
+}
+
+const isActividad = (actividad, target) => normalizeText(actividad) === normalizeText(target)
+const actividadRequiresPk = (actividad) => Boolean(getActividadRule(actividad).requiresPk)
+const actividadShowsObservaciones = (actividad) => Boolean(getActividadRule(actividad).showsObservaciones)
+
+const inferSegmentByTask = (task) => {
+  if (String(task?.manualSegment || '').trim().toLowerCase() === 'actividad') return 'actividad'
+  const text = normalizeText([
+    task?.nombreTarea,
+    task?.contextoContrato,
+    task?.contextoNivel,
+    task?.codigoEdt,
+  ].filter(Boolean).join(' '))
+  if (!text) return 'servidumbre'
+
+  const isCamara = /(camara|camaras|cámara|cámaras)/.test(text)
+  const isServidumbre = /(servidumbre|desmalezado|acceso|porton|portón|senalet|señalet|pk)/.test(text)
+
+  if (isCamara && !isServidumbre) return 'camaras'
+  if (isCamara && isServidumbre) return 'camaras'
+  if (isServidumbre) return 'servidumbre'
+  return 'servidumbre'
+}
+
+const inferAvailableSegmentsByTask = (task) => {
+  const detected = inferSegmentByTask(task)
+  return {
+    actividad: detected === 'actividad',
+    servidumbre: detected === 'servidumbre',
+    camaras: detected === 'camaras',
+  }
+}
+
+const buildInitialSegmentToggles = (task) => {
+  const detected = inferSegmentByTask(task)
+  return {
+    actividad: detected === 'actividad',
+    servidumbre: detected === 'servidumbre',
+    camaras: detected === 'camaras',
+  }
+}
+
+const getGeoState = (idTarea) => {
+  const key = String(idTarea ?? '')
+  if (!geoByTask.value[key]) {
+    geoByTask.value[key] = {
+      loading: false,
+      error: '',
+      lat: null,
+      lon: null,
+      accuracy: null,
+    }
+  }
+  return geoByTask.value[key]
+}
+
+const captureCurrentLocation = (idTarea) => {
+  const state = getGeoState(idTarea)
+  state.loading = true
+  state.error = ''
+
+  if (!navigator?.geolocation) {
+    state.loading = false
+    state.error = 'Tu navegador no soporta geolocalización.'
+    return
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      state.lat = pos?.coords?.latitude ?? null
+      state.lon = pos?.coords?.longitude ?? null
+      state.accuracy = pos?.coords?.accuracy ?? null
+      state.loading = false
+    },
+    (err) => {
+      state.loading = false
+      if (err?.code === 1) state.error = 'Permiso de ubicación denegado.'
+      else if (err?.code === 2) state.error = 'Ubicación no disponible.'
+      else if (err?.code === 3) state.error = 'Tiempo de espera agotado para ubicación.'
+      else state.error = 'Error obteniendo ubicación.'
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  )
+}
+
+const getGeoMapUrl = (idTarea) => {
+  const state = getGeoState(idTarea)
+  const lat = Number(state.lat)
+  const lon = Number(state.lon)
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return ''
+  const d = 0.05
+  const bbox = `${lon - d}%2C${lat - d}%2C${lon + d}%2C${lat + d}`
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat}%2C${lon}`
+}
+
+const removeTaskCard = (idTarea) => {
+  const key = String(idTarea ?? '')
+  if (!key) return
+  const next = new Set(removedTaskIds.value)
+  next.add(key)
+  removedTaskIds.value = next
+  const nextVisible = new Set(forceVisibleTaskIds.value)
+  nextVisible.delete(key)
+  forceVisibleTaskIds.value = nextVisible
+  delete ppdStateByTask.value[key]
+  delete geoByTask.value[key]
+}
+
+const getPpdDraft = (idTarea, task = null) => {
+  const key = String(idTarea ?? '')
+  if (!ppdStateByTask.value[key]) {
+    const availableSegments = inferAvailableSegmentsByTask(task)
+    const toggles = buildInitialSegmentToggles(task)
+    toggles.servidumbre = availableSegments.servidumbre ? toggles.servidumbre : false
+    toggles.camaras = availableSegments.camaras ? toggles.camaras : false
+    ppdStateByTask.value[key] = {
+      enabled: false,
+      patrullas: [],
+      taskContextHydrated: Boolean(task),
+      availableSegments,
+      segmentToggles: toggles,
+      uiSegments: {
+        segmento1: true,
+        segmento2: true,
+        segmento3: true,
+        segmento5: true,
+        segmentoDefActividades: false,
+      },
+      primeraMantencion: [createPrimeraRegistro()],
+      camaraMantencion: [createCamaraRegistro()],
+      actividad: {
+        ...createActividadRegistro(),
+        actividad: String(task?.actividadNombre || '').trim() || null,
+      },
+    }
+  } else if (task && !ppdStateByTask.value[key].taskContextHydrated) {
+    // Si el draft se creó sin contexto de tarea, corregimos segmento una sola vez.
+    const availableSegments = inferAvailableSegmentsByTask(task)
+    ppdStateByTask.value[key].availableSegments = availableSegments
+    ppdStateByTask.value[key].segmentToggles = {
+      actividad: availableSegments.actividad,
+      servidumbre: availableSegments.servidumbre,
+      camaras: availableSegments.camaras,
+    }
+    ppdStateByTask.value[key].taskContextHydrated = true
+    if (!ppdStateByTask.value[key].uiSegments) {
+      ppdStateByTask.value[key].uiSegments = {
+        segmento1: true,
+        segmento2: true,
+        segmento3: true,
+        segmento5: true,
+        segmentoDefActividades: false,
+      }
+    } else {
+      if (ppdStateByTask.value[key].uiSegments.segmento5 === undefined) {
+        ppdStateByTask.value[key].uiSegments.segmento5 = true
+      }
+      if (ppdStateByTask.value[key].uiSegments.segmentoDefActividades === undefined) {
+        ppdStateByTask.value[key].uiSegments.segmentoDefActividades = false
+      }
+    }
+  }
+  return ppdStateByTask.value[key]
+}
+
+const isSegmentAvailable = (task, segmentKey) => {
+  const draft = getPpdDraft(task?.idTarea, task)
+  return Boolean(draft?.availableSegments?.[segmentKey])
+}
+
+const isSegmentVisible = (task, segmentKey) => {
+  return isSegmentAvailable(task, segmentKey)
+}
+
+const getTaskSubtitle = (task) =>
+  isSegmentAvailable(task, 'actividad')
+    ? 'Actividad PPD2'
+    : isSegmentAvailable(task, 'camaras')
+    ? 'Mantención Cámaras'
+    : 'Primera Mantención de Servidumbres'
+
+const getActividadNombre = (task) => {
+  const draft = getPpdDraft(task?.idTarea, task)
+  return String(draft?.actividad?.actividad || task?.actividadNombre || task?.nombreTarea || '').trim()
+}
+
+const isUiSegmentOpen = (task, segmentKey) => {
+  const draft = getPpdDraft(task?.idTarea, task)
+  return Boolean(draft?.uiSegments?.[segmentKey])
+}
+
+const setUiSegmentOpen = (task, segmentKey, value) => {
+  const draft = getPpdDraft(task?.idTarea, task)
+  if (!draft.uiSegments) {
+    draft.uiSegments = {
+      segmento1: true,
+      segmento2: true,
+      segmento3: true,
+      segmento5: true,
+      segmentoDefActividades: false,
+    }
+  }
+  if (draft.uiSegments.segmento5 === undefined) draft.uiSegments.segmento5 = true
+  if (draft.uiSegments.segmentoDefActividades === undefined) draft.uiSegments.segmentoDefActividades = false
+  draft.uiSegments[segmentKey] = Boolean(value)
+}
+
+const toggleUiSegment = (task, segmentKey) => {
+  const current = isUiSegmentOpen(task, segmentKey)
+  setUiSegmentOpen(task, segmentKey, !current)
+}
+
+const getSegmentToggle = (task, segmentKey) => {
+  if (!isSegmentAvailable(task, segmentKey)) return false
+  const draft = getPpdDraft(task?.idTarea, task)
+  return Boolean(draft?.segmentToggles?.[segmentKey])
+}
+
+const setSegmentToggle = (task, segmentKey, value) => {
+  const draft = getPpdDraft(task?.idTarea, task)
+  if (!draft?.availableSegments?.[segmentKey]) return
+  if (!draft.segmentToggles) {
+    draft.segmentToggles = buildInitialSegmentToggles(task)
+  }
+  draft.segmentToggles[segmentKey] = Boolean(value)
+}
+
+const getPatrullasOptions = (task) => {
+  return patrullasFijasOptions
+}
+
+const getPkOptions = (task) => {
+  const range = parsePkRangeFromTitle(task?.nombreTarea)
+  if (!range) return ['PK no definida']
+  const midpoint = (range.start + range.end) / 2
+  return [range.start, midpoint, range.end].map(formatPkOption)
+}
+
+const getCamaraOptions = (task) => {
+  const recursos = Array.isArray(task?.recursos) ? task.recursos : []
+  const fromRecursos = recursos
+    .map((r) => String(r || '').trim())
+    .filter((r) => /camara|cámara/i.test(r))
+  if (fromRecursos.length) return fromRecursos
+  return Array.from({ length: 10 }, (_, i) => `Cámara ${i + 1}`)
+}
+
+const getPrimeraRegistros = (idTarea) => getPpdDraft(idTarea).primeraMantencion
+const getCamaraRegistros = (idTarea) => getPpdDraft(idTarea).camaraMantencion
+const getCantidadCamarasRealizadas = (registro) =>
+  Array.isArray(registro?.camarasSeleccionadas) ? registro.camarasSeleccionadas.length : 0
+
+const addPrimeraRegistro = (task) => {
+  const registros = getPrimeraRegistros(task?.idTarea)
+  registros.push(createPrimeraRegistro())
+}
+
+const removePrimeraRegistro = (idTarea, index) => {
+  const registros = getPrimeraRegistros(idTarea)
+  if (registros.length <= 1) return
+  registros.splice(index, 1)
+}
+
+const removeCamaraRegistro = (idTarea, index) => {
+  const registros = getCamaraRegistros(idTarea)
+  if (registros.length <= 1) return
+  registros.splice(index, 1)
+}
+
+const tareasMapById = computed(() => {
+  const map = new Map()
+  const list = Array.isArray(tareasBase.value) ? tareasBase.value : []
+  list.forEach((t) => {
+    const id = t?.id_tarea
+    if (id !== null && id !== undefined && id !== '') {
+      map.set(String(id), t)
+    }
+  })
+  return map
+})
+
+const buildTaskOption = (task) => {
+  const codigo = String(task?.codigo_edt || '').trim()
+  const nombre = String(task?.nombre_tarea || '').trim()
+  const title = [codigo, nombre].filter(Boolean).join(' - ')
+  return {
+    value: String(task?.id_tarea ?? ''),
+    title: title || `Tarea ${String(task?.id_tarea ?? '')}`,
+  }
+}
+
+const getChildrenTasks = (parentId) => {
+  const parentKey = String(parentId ?? '')
+  if (!parentKey) return []
+  return (Array.isArray(tareasBase.value) ? tareasBase.value : [])
+    .filter((t) => String(t?.id_tarea_padre ?? '') === parentKey)
+    .sort((a, b) =>
+      String(a?.codigo_edt || '').localeCompare(String(b?.codigo_edt || ''), 'es', { numeric: true })
+    )
+}
+
+const createTaskOptionsNivel1 = computed(() =>
+  (Array.isArray(tareasBase.value) ? tareasBase.value : [])
+    .filter((t) => t?.id_tarea_padre === null || t?.id_tarea_padre === undefined || t?.id_tarea_padre === '')
+    .sort((a, b) =>
+      String(a?.codigo_edt || '').localeCompare(String(b?.codigo_edt || ''), 'es', { numeric: true })
+    )
+    .map(buildTaskOption)
+)
+
+const buildOtrosNivel2Option = (parentId, children = []) => {
+  const parentTask = tareasMapById.value.get(String(parentId ?? ''))
+  const parentCode = String(parentTask?.codigo_edt || '').trim()
+
+  let maxSuffix = 0
+  for (const child of children) {
+    const childCode = String(child?.codigo_edt || '').trim()
+    const match = childCode.match(/(?:^|\.)((\d+))$/)
+    const suffix = Number(match?.[1])
+    if (Number.isFinite(suffix)) maxSuffix = Math.max(maxSuffix, suffix)
+  }
+
+  const nextSuffix = maxSuffix > 0 ? maxSuffix + 1 : 1
+  const nextCode = parentCode ? `${parentCode}.${nextSuffix}` : String(nextSuffix)
+  return {
+    value: `__otros_nivel2__:${String(parentId ?? '')}`,
+    title: `${nextCode} - Otros`,
+  }
+}
+
+const createTaskOptionsNivel2 = computed(() => {
+  const nivel1 = createTaskSelection.value.nivel1
+  const children = getChildrenTasks(nivel1)
+  const baseOptions = children.map(buildTaskOption)
+  const hasOtros = baseOptions.some((opt) => normalizeText(opt?.title).includes('otros'))
+  if (!nivel1 || hasOtros) return baseOptions
+  return [...baseOptions, buildOtrosNivel2Option(nivel1, children)]
+})
+
+const otrosNivel3Catalog = [
+  { titulo: 'SEÑALETICA' },
+  { titulo: 'CORTE Y RETIRO LINEA FUERA DE SERVICIO' },
+  { titulo: 'CONTROL DE EROSIONES' },
+  { titulo: 'APOYO SERVIDUMBRE REÑACA ALTO' },
+  { titulo: 'LIMPIEZA CANAL INTERIOR Y EXTERIOR PLANTA CURACAVI' },
+  { titulo: 'APOYO RECORRIDO INSPECCIÓN' },
+  { titulo: 'MARCACION DE OLEODUCTO' },
+  { titulo: 'CALICATAS' },
+  { titulo: 'CAPACITACIONES O CURSOS' },
+  { titulo: 'REUNIÓN' },
+  { titulo: 'TRABAJOS ADICIONALES SERVIDUMBRE' },
+  { titulo: 'RETIRO Y ENTREGA DE MATERIALES/HERRAMIENTAS' },
+  { titulo: 'MANTENCIÓN DE CAMIONETAS' },
+  { titulo: 'MANTENCIÓN DE ACCESOS SERVIDUMBRE' },
+  { titulo: 'MANTENCION DE EMPALMES RECTIFICADORES Y REMOTO' },
+  { titulo: 'MANTENCIÓN DE PORTON' },
+  { titulo: 'APOYO CONEJEO' },
+]
+
+const createTaskOptionsNivel3 = computed(() => {
+  const nivel2 = createTaskSelection.value.nivel2
+  const children = getChildrenTasks(nivel2).map(buildTaskOption)
+  if (children.length) return children
+
+  const nivel2Option = getOptionByValue(createTaskOptionsNivel2.value, nivel2)
+  const nivel2Nombre = extractNameFromOptionTitle(nivel2Option?.title || '')
+  const isOtrosNivel2 = normalizeText(nivel2Nombre) === 'otros'
+  if (!isOtrosNivel2) return []
+
+  const nivel2Code = extractCodeFromOptionTitle(nivel2Option?.title || '')
+  return otrosNivel3Catalog.map((item, idx) => ({
+    value: `__manual_n3__:${String(nivel2 ?? '')}:${idx}`,
+    title: `${nivel2Code ? `${nivel2Code}.` : ''}${idx + 1} ${item.titulo}`,
+  }))
+})
+
+const openCreateTaskModal = () => {
+  createTaskSelection.value = { nivel1: null, nivel2: null, nivel3: null }
+  showCreateTaskModal.value = true
+}
+
+const closeCreateTaskModal = () => {
+  showCreateTaskModal.value = false
+}
+
+const confirmCreateTask = () => {
+  const key = String(createTaskSelection.value.nivel3 ?? '')
+  if (!key) return
+
+  if (key.startsWith('__manual_n3__:')) {
+    const nivel1Option = getOptionByValue(createTaskOptionsNivel1.value, createTaskSelection.value.nivel1)
+    const nivel2Option = getOptionByValue(createTaskOptionsNivel2.value, createTaskSelection.value.nivel2)
+    const nivel3Option = getOptionByValue(createTaskOptionsNivel3.value, createTaskSelection.value.nivel3)
+    const parsedManual = parseManualNivel3Title(nivel3Option?.title || '')
+    const exists = manualCreatedTasks.value.some((t) => String(t?.idTarea ?? '') === key)
+    if (!exists) {
+      manualCreatedTasks.value.push({
+        idTarea: key,
+        idPadre: createTaskSelection.value.nivel2,
+        esPadre: false,
+        codigoEdt: parsedManual.codigo || '',
+        nombreTarea: parsedManual.nombre || 'Otros',
+        actividadNombre: parsedManual.nombre || 'Otros',
+        manualSegment: 'actividad',
+        unidad: '',
+        proyectoNombre: '',
+        planDia: 0,
+        realDia: 0,
+        contextoContrato: extractNameFromOptionTitle(nivel1Option?.title || ''),
+        contextoNivel: extractNameFromOptionTitle(nivel2Option?.title || ''),
+        tieneEntradaDiaria: true,
+        recursos: [],
+      })
+    }
+  }
+
+  const nextVisible = new Set(forceVisibleTaskIds.value)
+  nextVisible.add(key)
+  forceVisibleTaskIds.value = nextVisible
+
+  const nextRemoved = new Set(removedTaskIds.value)
+  nextRemoved.delete(key)
+  removedTaskIds.value = nextRemoved
+
+  showCreateTaskModal.value = false
+}
+
+const getTaskHierarchyNames = (task) => {
+  const out = []
+  const visited = new Set()
+  let current = task
+  let guard = 0
+  while (current && guard < 30) {
+    guard += 1
+    const key = String(current?.id_tarea ?? '')
+    if (!key || visited.has(key)) break
+    visited.add(key)
+    const nombre = String(current?.nombre_tarea || '').trim()
+    if (nombre) out.unshift(nombre)
+    const parentId = current?.id_tarea_padre
+    if (parentId === null || parentId === undefined || parentId === '') break
+    current = tareasMapById.value.get(String(parentId))
+  }
+  return out
+}
+
+const tareasTarjeta = computed(() => {
+  const fecha = toYmd(fechaSeleccionada.value)
+  if (!fecha) return []
+
+  const idPadres = new Set(
+    (Array.isArray(tareasBase.value) ? tareasBase.value : [])
+      .map((t) => t?.id_tarea_padre)
+      .filter((v) => v !== null && v !== undefined && v !== '')
+      .map((v) => String(v))
+  )
+
+  const baseTasks = (Array.isArray(tareasBase.value) ? tareasBase.value : [])
+    .map((t) => {
+      const diarios = parseJsonArray(t?.json_data)
+      const diariosFecha = diarios.filter((d) => toYmd(d?.fecha) === fecha)
+
+      const planDia = diariosFecha.reduce(
+        (acc, d) =>
+          acc +
+          toNumberSafe(
+            d?.value ??
+            d?.plan ??
+            d?.planificado ??
+            d?.cantidad_plan ??
+            d?.plan_reasignado
+          ),
+        0
+      )
+      const realDia = diariosFecha.reduce(
+        (acc, d) => acc + toNumberSafe(d?.real ?? d?.cantidad_real),
+        0
+      )
+      const jerarquia = getTaskHierarchyNames(t)
+      const contextoContrato = jerarquia[0] || ''
+      const contextoNivel = jerarquia[1] || ''
+
+      return {
+        idTarea: t?.id_tarea,
+        idPadre: t?.id_tarea_padre,
+        esPadre: idPadres.has(String(t?.id_tarea)),
+        codigoEdt: t?.codigo_edt || '',
+        nombreTarea: t?.nombre_tarea || 'Sin nombre',
+        unidad: t?.unidad || '',
+        proyectoNombre: t?.nombre_proyecto || '',
+        planDia,
+        realDia,
+        contextoContrato,
+        contextoNivel,
+        tieneEntradaDiaria: diariosFecha.length > 0,
+        recursos: parseRecursos(t?.equipos_json),
+      }
+    })
+    .filter(
+      (t) =>
+        !t.esPadre &&
+        (t.planDia > 0 || t.realDia > 0 || t.tieneEntradaDiaria || forceVisibleTaskIds.value.has(String(t.idTarea ?? '')))
+    )
+
+  return [...baseTasks, ...manualCreatedTasks.value]
+    .filter((t) => !removedTaskIds.value.has(String(t.idTarea ?? '')))
+    .sort((a, b) => {
+      const edtCmp = String(a.codigoEdt || '').localeCompare(String(b.codigoEdt || ''), 'es', { numeric: true })
+      if (edtCmp !== 0) return edtCmp
+      return String(a.nombreTarea || '').localeCompare(String(b.nombreTarea || ''), 'es', { sensitivity: 'base' })
+    })
+})
+
+const resumenFecha = computed(() => {
+  const total = tareasTarjeta.value.length
+  const fecha = toYmd(fechaSeleccionada.value) || 'sin fecha'
+  return `PPD2: ${total} tarea(s) para ${fecha}.`
+})
+
+const normalizarPayload = (payload) => {
+  if (Array.isArray(payload)) return payload
+  if (Array.isArray(payload?.datos)) return payload.datos
+  if (Array.isArray(payload?.data)) return payload.data
+  return []
+}
+
+const getProjectsIdsFromStorage = () => {
+  try {
+    const rawLegacy = JSON.parse(localStorage.getItem('proyectsIds') || '[]')
+    const rawAlt = JSON.parse(localStorage.getItem('projectsIds') || '[]')
+    const raw = Array.isArray(rawLegacy) && rawLegacy.length ? rawLegacy : rawAlt
+    return Array.isArray(raw)
+      ? raw.map((v) => String(v ?? '').trim()).filter(Boolean)
+      : []
+  } catch {
+    return []
+  }
+}
+
+const normalizeProyectoId = (v) => {
+  if (v === null || v === undefined || v === '') return ''
+  if (typeof v === 'object') return v.id_proyecto ?? v.value ?? ''
+  return v
+}
+
+const cargarClientes = async () => {
+  try {
+    const { data } = await apiAxios.get('/servicio/leanglobal/obtenerEmpresas')
+    clientes.value = (Array.isArray(data) ? data : []).filter(
+      (e) => !(e.flag_externo === true || e.flag_externo === 1 || e.flag_externo === '1' || e.flag_externo === 't' || e.flag_externo === 'true')
+    )
+  } catch (e) {
+    clientes.value = []
+    errorCarga.value = `No se pudieron cargar clientes: ${e?.message || e}`
+  }
+}
+
+const cargarProyectos = async () => {
+  try {
+    const idCliente = clienteSeleccionado.value ?? ''
+    const { data } = await apiAxios.get(`/servicio/leanglobal/obtenerProyectos?id_empresa_cliente=${idCliente}`)
+    proyectos.value = normalizarPayload(data)
+  } catch (e) {
+    proyectos.value = []
+    errorCarga.value = `No se pudieron cargar proyectos: ${e?.message || e}`
+  }
+}
+
+const cargarTareas = async () => {
+  cargando.value = true
+  errorCarga.value = ''
+  totalBase.value = 0
+  try {
+    const selectedProyecto = String(normalizeProyectoId(proyectoSeleccionado.value) ?? '').trim()
+
+    if (!selectedProyecto) {
+      tareasBase.value = []
+      errorCarga.value = 'Selecciona un proyecto para cargar tareas (igual que en GANTTV3).'
+      return
+    }
+
+    const idProyectoParam = Number(selectedProyecto)
+    const { data } = await apiAxios.get('/servicio/leanglobal/obtenerGanttsTareasV3', {
+      params: { id_proyecto: Number.isFinite(idProyectoParam) ? idProyectoParam : selectedProyecto }
+    })
+    const base = normalizarPayload(data)
+    removedTaskIds.value = new Set()
+    forceVisibleTaskIds.value = new Set()
+    totalBase.value = base.length
+    tareasBase.value = base
+  } catch (e) {
+    tareasBase.value = []
+    totalBase.value = 0
+    errorCarga.value = `No se pudieron cargar tareas: ${e?.message || e}`
+  } finally {
+    cargando.value = false
+  }
+}
+
+const pickPreferredProyecto = () => {
+  const ids = getProjectsIdsFromStorage()
+  if (!Array.isArray(proyectos.value) || !proyectos.value.length) return null
+  if (ids.length) {
+    const hit = proyectos.value.find((p) => ids.includes(String(p?.id_proyecto ?? '').trim()))
+    if (hit) return hit.id_proyecto
+  }
+  return proyectos.value[0]?.id_proyecto ?? null
+}
+
+const pickDefaultCliente = () => {
+  const list = Array.isArray(clientes.value) ? clientes.value : []
+  const hit = list.find((c) => normalizeText(c?.name_empresa).includes(DEFAULT_CLIENTE_NOMBRE))
+  return hit?.id_empresa ?? null
+}
+
+const pickDefaultProyecto = () => {
+  const list = Array.isArray(proyectos.value) ? proyectos.value : []
+  const hit = list.find((p) => normalizeText(p?.nombre_proyecto).includes(DEFAULT_PROYECTO_NOMBRE))
+  return hit?.id_proyecto ?? null
+}
+
+watch(clienteSeleccionado, async () => {
+  proyectoSeleccionado.value = null
+  await cargarProyectos()
+  const autoProyecto = pickDefaultProyecto() ?? pickPreferredProyecto()
+  if (autoProyecto !== null && autoProyecto !== undefined) {
+    proyectoSeleccionado.value = autoProyecto
+  }
+})
+
+watch(proyectoSeleccionado, async (nuevo) => {
+  if (!nuevo) {
+    tareasBase.value = []
+    totalBase.value = 0
+    return
+  }
+  await cargarTareas()
+})
+
+watch(
+  () => createTaskSelection.value.nivel1,
+  () => {
+    createTaskSelection.value.nivel2 = null
+    createTaskSelection.value.nivel3 = null
+  }
+)
+
+watch(
+  () => createTaskSelection.value.nivel2,
+  () => {
+    createTaskSelection.value.nivel3 = null
+  }
+)
+
+onMounted(async () => {
+  await cargarClientes()
+  const defaultCliente = pickDefaultCliente()
+  if (defaultCliente !== null && defaultCliente !== undefined) {
+    clienteSeleccionado.value = defaultCliente
+  } else {
+    await cargarProyectos()
+    const autoProyecto = pickDefaultProyecto() ?? pickPreferredProyecto()
+    if (autoProyecto !== null && autoProyecto !== undefined) {
+      proyectoSeleccionado.value = autoProyecto
+    }
+  }
+})
+</script>
+
+<style scoped>
+.ppd2-page {
+  background: #f8fafc;
+  min-height: calc(100vh - 80px);
+}
+
+.ppd-editor {
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f8fbff;
+}
+
+.ppd-registro {
+  background: #ffffff;
+  padding: 2px 0;
+  margin-bottom: 4px;
+}
+
+.ppd-registro:last-child {
+  margin-bottom: 0;
+}
+
+.ppd-map-placeholder {
+  border: 1px dashed #94a3b8;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 11px;
+  color: #334155;
+  background: #f8fafc;
+}
+
+.ppd-map-label {
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.ppd-map-embed-wrap {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px;
+  background: #fff;
+}
+
+.ppd-map-embed {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 6px;
+}
+
+.ppd-map-meta {
+  font-size: 9px;
+  line-height: 1.2;
+}
+</style>

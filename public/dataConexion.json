@@ -1,0 +1,177 @@
+[
+    {
+        "grupo": [
+            {
+                "titulo": "",
+                "nombreCorto": "Indicadores Generales del proceso de Conexión ",
+                "indicadores": [
+                    {
+                        "titulo": "Kpi Conex 1",
+                        "icono": "mdi-medal",
+                        "color":"Green",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/calidad",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 2",
+                        "icono": "mdi-chart-timeline",
+                        "color":"Indigo",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/avance",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+
+                    },
+                    {
+                        "titulo": "Kpi Conex 3",
+                        "icono": "mdi-security",
+                        "color":"Teal",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/seguridad",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 4",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 5",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 6",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 7",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    },
+                    {
+                        "titulo": "Kpi Conex 8",
+                        "icono": "mdi-leaf-circle-outline",
+                        "color":"Orange",
+                        "unidad": "",
+                        "uri":"/general/dashboard/kpi/medioAmbiente",
+                        "grafico": {"categoria": "serie",
+                            "nombre":"serie",
+                            "series":[
+                            {"campo": "cantidad", "name":"cantidad",  "type":"column", "visible": true, "showInLegend": true}
+                            ]},
+                        "columnas": [{"nombre": "serie" , "header":"Fecha", "tipo":"fecha"},
+                                    {"nombre": "cantidad" , "header":"Q Protocolos", "tipo":"number"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "export": {
+            "filename": "calidad.xlsx",
+            "hojas": [
+              {
+                "nombre": "Lotes Recepción",
+                "url": "servicio/leanglobal/procesosSurveyV3?fecha_desde=2025-08-26&fecha_hasta=2025-09-25&ts.id_empresa_cliente=&ts.id_proyecto=",
+                "campos": [
+                  { "nombre": "id_survey", "header": "survey" }
+                ]
+              }
+
+            ]
+        }
+    },
+    {
+        "planificacionConexion": {
+            "titulo": "PlanificacionConexion",
+            "nombreCorto": "Planificación Conexión:",
+            "indicadores": [
+                {
+                    "titulo": "TOTAL PLAN",
+                    "icono": "mdi-calendar-clock",
+                    "color": "Blue",
+                    "unidad": "",
+                    "uri": "/conexion/planificacion/total"
+                },
+                {
+                    "titulo": "EJECUTADO",
+                    "icono": "mdi-check-circle-outline",
+                    "color": "Green",
+                    "unidad": "",
+                    "uri": "/conexion/planificacion/ejecutado"
+                },
+                {
+                    "titulo": "PENDIENTE",
+                    "icono": "mdi-alert-circle-outline",
+                    "color": "Orange",
+                    "unidad": "",
+                    "uri": "/conexion/planificacion/pendiente"
+                },
+                {
+                    "titulo": "AVANCE",
+                    "icono": "mdi-percent",
+                    "color": "Teal",
+                    "unidad": "%",
+                    "uri": "/conexion/planificacion/avance"
+                }
+            ]
+        }
+    }
+
+]

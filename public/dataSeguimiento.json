@@ -1,0 +1,329 @@
+[
+  {
+    "grupo": [
+      {
+        "titulo": "",
+        "nombreCorto": "Apertura Protocolos Calidad - Familias:",
+        "indicadores": [
+          {
+            "titulo": "Movimiento de tierras",
+            "icono": "mdi-excavator",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/movimientoTierras",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Area Mecánica",
+            "icono": "mdi-wrench",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/areaMecanica",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Cierre y Restitución",
+            "icono": "mdi-sign-caution",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/cierreReconstruccion",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Ensayos y Pruebas",
+            "icono": "mdi-ruler-square-compass",
+            "color": "Orange",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/ensayosPruebas",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metricas": [
+      {
+        "tipo": "",
+        "titulo": "",
+        "nombreCorto": "Proyectos",
+        "indicadores": [
+          {
+            "titulo": "Movimiento de tierras",
+            "icono": "mdi-excavator",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/movimientoTierras",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Area Mecánica",
+            "icono": "mdi-wrench",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/areaMecanica",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tipo": "",
+        "titulo": "",
+        "nombreCorto": "Cuadrilla",
+        "indicadores": [
+          {
+            "titulo": "Movimiento de tierras",
+            "icono": "mdi-excavator",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/movimientoTierras",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Area Mecánica",
+            "icono": "mdi-wrench",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/areaMecanica",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tipo": "",
+        "titulo": "",
+        "nombreCorto": "Cuadrilla",
+        "indicadores": [
+          {
+            "titulo": "Movimiento de tierras",
+            "icono": "mdi-excavator",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/movimientoTierras",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          },
+          {
+            "titulo": "Area Mecánica",
+            "icono": "mdi-wrench",
+            "color": "Green",
+            "unidad": "",
+            "uri": "/calidad/dashboard/familias/areaMecanica",
+            "grafico": {
+              "categoria": "serie",
+              "nombre": "serie",
+              "series": [
+                {
+                  "campo": "cantidad",
+                  "name": "cantidad",
+                  "type": "column",
+                  "visible": true,
+                  "showInLegend": true
+                }
+              ]
+            },
+            "columnas": [
+              { "nombre": "serie", "header": "Fecha", "tipo": "fecha" },
+              {
+                "nombre": "cantidad",
+                "header": "Q Protocolos",
+                "tipo": "number"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "export": {
+      "filename": "calidad.xlsx",
+      "hojas": [
+        {
+          "nombre": "Lotes Recepción",
+          "url": "servicio/leanglobal/procesosSurveyV3?fecha_desde=2025-08-26&fecha_hasta=2025-09-25&ts.id_empresa_cliente=&ts.id_proyecto=",
+          "campos": [{ "nombre": "id_survey", "header": "survey" }]
+        }
+      ]
+    }
+  }
+]
