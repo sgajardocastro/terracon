@@ -16,13 +16,15 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const rawBaseUrl = env.VITE_APP_BASE_URL || '/'
   let base = '/'
-  try {
-    const parsed = new URL(rawBaseUrl)
-    base = parsed.pathname || '/'
-  } catch {
-    base = rawBaseUrl.startsWith('/') ? rawBaseUrl : `/${rawBaseUrl}`
+  if (mode === 'production') {
+    try {
+      const parsed = new URL(rawBaseUrl)
+      base = parsed.pathname || '/'
+    } catch {
+      base = rawBaseUrl.startsWith('/') ? rawBaseUrl : `/${rawBaseUrl}`
+    }
+    if (!base.endsWith('/')) base = `${base}/`
   }
-  if (!base.endsWith('/')) base = `${base}/`
 
   return {
   base,
