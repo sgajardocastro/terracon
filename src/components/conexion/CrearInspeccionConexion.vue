@@ -5604,9 +5604,6 @@ async function guardarEdicion() {
     if (idSupervisor && !idPadre) {
       throw new Error('No se encontro survey padre para reasignar Supervisor.')
     }
-    if (idTecnico && !idHijo && !isPlanCMode()) {
-      throw new Error('No se encontro survey hijo para reasignar Tecnico.')
-    }
 
     console.log('[AUTO-FLOW][guardarEdicion] id_survey:', id, {
       idPadre,
@@ -5651,14 +5648,17 @@ async function guardarEdicion() {
           asignaciones: {
             Contratista: Number(idEmpresa || asigPadre.contratista || 0),
             Supervisor: Number(idSupervisor || 0),
-            Tecnico: Number(isPlanCMode() ? (idTecnico || asigPadre.tecnico || 0) : (asigPadre.tecnico || 0))
+            Tecnico: Number(idTecnico || asigPadre.tecnico || 0)
           }
         })
       )
-      // Usuario asignado del PADRE => Supervisor
+      // Usuario asignado del PADRE => Tecnico si no hay hijo, o Supervisor si hay hijo / Plan C
+      const idUserAsignadoPadre = Number(
+        (isPlanCMode() ? (idTecnico || idSupervisor || 0) : (!idHijo && idTecnico ? idTecnico : (idSupervisor || 0))) || 0
+      )
       updsPlan.push(
         apiAxios.put(`/survey/UpdPlan/${idPadre}`, {
-          id_user: Number((isPlanCMode() ? (idTecnico || idSupervisor || 0) : (idSupervisor || 0)) || 0),
+          id_user: idUserAsignadoPadre,
           fecha_plan_ini: planPadre.fecha_plan_ini || editForm.value.fecha_plan_ini || '',
           fecha_plan_fin: planPadre.fecha_plan_fin || editForm.value.fecha_plan_fin || ''
         })
